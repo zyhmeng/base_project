@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BP_HomePageViewController.h
 //  base_project
 //
 //  Created by jangbuk on 15/10/30.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BP_HomePageViewController : UIViewController
 
 @end
-

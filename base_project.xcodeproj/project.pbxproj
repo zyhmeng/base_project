@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		84BD2BA11BE30B5D006E93A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2BA01BE30B5D006E93A1 /* main.m */; };
 		84BD2BA41BE30B5D006E93A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2BA31BE30B5D006E93A1 /* AppDelegate.m */; };
-		84BD2BA71BE30B5D006E93A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2BA61BE30B5D006E93A1 /* ViewController.m */; };
 		84BD2BAA1BE30B5D006E93A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BD2BA81BE30B5D006E93A1 /* Main.storyboard */; };
 		84BD2BAD1BE30B5D006E93A1 /* base_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2BAB1BE30B5D006E93A1 /* base_project.xcdatamodeld */; };
 		84BD2BAF1BE30B5D006E93A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BD2BAE1BE30B5D006E93A1 /* Assets.xcassets */; };
 		84BD2BB21BE30B5D006E93A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BD2BB01BE30B5D006E93A1 /* LaunchScreen.storyboard */; };
 		84BD2BBD1BE30B5D006E93A1 /* base_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2BBC1BE30B5D006E93A1 /* base_projectTests.m */; };
 		84BD2BC81BE30B5D006E93A1 /* base_projectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2BC71BE30B5D006E93A1 /* base_projectUITests.m */; };
+		84BD2BDB1BE30CC7006E93A1 /* BP_HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2BD91BE30CC7006E93A1 /* BP_HomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84BD2BDC1BE30CC7006E93A1 /* BP_HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BD2BDA1BE30CC7006E93A1 /* BP_HomePageViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,6 @@
 		84BD2BA01BE30B5D006E93A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84BD2BA21BE30B5D006E93A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84BD2BA31BE30B5D006E93A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84BD2BA51BE30B5D006E93A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84BD2BA61BE30B5D006E93A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		84BD2BA91BE30B5D006E93A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84BD2BAC1BE30B5D006E93A1 /* base_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = base_project.xcdatamodel; sourceTree = "<group>"; };
 		84BD2BAE1BE30B5D006E93A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,9 @@
 		84BD2BC31BE30B5D006E93A1 /* base_projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = base_projectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BD2BC71BE30B5D006E93A1 /* base_projectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = base_projectUITests.m; sourceTree = "<group>"; };
 		84BD2BC91BE30B5D006E93A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84BD2BD81BE30CC7006E93A1 /* BP_HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BP_HomePageViewController.h; sourceTree = "<group>"; };
+		84BD2BD91BE30CC7006E93A1 /* BP_HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BP_HomePageViewController.m; sourceTree = "<group>"; };
+		84BD2BDA1BE30CC7006E93A1 /* BP_HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BP_HomePageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,7 @@
 			children = (
 				84BD2BA21BE30B5D006E93A1 /* AppDelegate.h */,
 				84BD2BA31BE30B5D006E93A1 /* AppDelegate.m */,
-				84BD2BA51BE30B5D006E93A1 /* ViewController.h */,
-				84BD2BA61BE30B5D006E93A1 /* ViewController.m */,
+				84BD2BD61BE30C3D006E93A1 /* 基础工程样例 */,
 				84BD2BA81BE30B5D006E93A1 /* Main.storyboard */,
 				84BD2BAE1BE30B5D006E93A1 /* Assets.xcassets */,
 				84BD2BB01BE30B5D006E93A1 /* LaunchScreen.storyboard */,
@@ -141,6 +142,24 @@
 				84BD2BC91BE30B5D006E93A1 /* Info.plist */,
 			);
 			path = base_projectUITests;
+			sourceTree = "<group>";
+		};
+		84BD2BD61BE30C3D006E93A1 /* 基础工程样例 */ = {
+			isa = PBXGroup;
+			children = (
+				84BD2BD71BE30C81006E93A1 /* 首页 */,
+			);
+			path = "基础工程样例";
+			sourceTree = "<group>";
+		};
+		84BD2BD71BE30C81006E93A1 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				84BD2BD81BE30CC7006E93A1 /* BP_HomePageViewController.h */,
+				84BD2BD91BE30CC7006E93A1 /* BP_HomePageViewController.m */,
+				84BD2BDA1BE30CC7006E93A1 /* BP_HomePageViewController.xib */,
+			);
+			path = "首页";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BD2BDC1BE30CC7006E93A1 /* BP_HomePageViewController.xib in Resources */,
 				84BD2BB21BE30B5D006E93A1 /* LaunchScreen.storyboard in Resources */,
 				84BD2BAF1BE30B5D006E93A1 /* Assets.xcassets in Resources */,
 				84BD2BAA1BE30B5D006E93A1 /* Main.storyboard in Resources */,
@@ -273,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84BD2BA71BE30B5D006E93A1 /* ViewController.m in Sources */,
+				84BD2BDB1BE30CC7006E93A1 /* BP_HomePageViewController.m in Sources */,
 				84BD2BA41BE30B5D006E93A1 /* AppDelegate.m in Sources */,
 				84BD2BAD1BE30B5D006E93A1 /* base_project.xcdatamodeld in Sources */,
 				84BD2BA11BE30B5D006E93A1 /* main.m in Sources */,
