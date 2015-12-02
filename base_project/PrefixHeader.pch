@@ -1,0 +1,78 @@
+//
+//  PrefixHeader.pch
+//  tuoniaowangguanliduan
+//
+//  Created by zx on 15/10/20.
+//  Copyright © 2015年 yunfeng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "CommonViewController.h"
+
+#define UISCREENWIDTH       [UIScreen mainScreen].bounds.size.width
+#define UISCREENHEIGHT      [UIScreen mainScreen].bounds.size.height
+#define SCALERWIDTH         [UIScreen mainScreen].bounds.size.width/320.0f
+#define SCALERHEIGHT        [UIScreen mainScreen].bounds.size.height/568.0f
+
+//系统版本判断
+#define UIDEVICE [[UIDevice currentDevice] systemVersion].doubleValue
+
+//UmengKey
+#define UmengKey @"55e6bcd267e58ebc45004169"
+
+//地图
+#define GaoDeMapKey @"7ed0e5a37b77fb9772682a751c352bda"
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
+//全局色值
+#define NAV_COLOR [UIColor colorWithPatternImage:[UIImage imageNamed:@"nav_bg"]]
+//颜色和透明度设置
+#define RGBA(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
+
+//HTTP请求头验证
+#define HttpHeaderFieldName @""
+
+//资源HTTP头
+#define ResHeaderURL @""
+
+//资源上传地址
+#define UploadServerURL @""
+
+//接口
+//访客
+#define CommonServerURL @"http://101.200.177.177:8080/ostrichvip/app/"
+
+
+//工厂方法类
+#import "Common/Common.h"
+
+//数据模型
+#import "Model/Model.h"
+
+
+//常用第三方工具类
+#import "EGOCache.h"
+#import <CommonCrypto/CommonDigest.h>
+#import "POP.h"
+#import "NSObject+CYJSONValidator.h"
+#import "Common/MBProgressHUD/MBProgressHUD.h"
+#import "HttpTool.h"
+#import "Common/FMDB/fmdb/FMDB.h"
+#import "Common/JSONKit/JSONKit.h"
+#import "Common/SDWebImage/UIImageView+WebCache.h"
+#import "Common/MJRefresh/MJRefresh.h"
+#import "Common/MJExtension/MJExtension.h"
+#import "Common/AFN2.0/AFNetworking/AFNetworking.h"
+#import "Common/MZTimerLabel/MZTimerLabel.h"
+//#import "Common/UMSocial_Sdk_4.2.3/Header/UMSocial.h"
+
+//全局变量
+//extern UserModel *g_user_model;//用户信息
+//extern RoleConfigModel *g_role_config_model;//用户配置信息模型
+
+#endif /* PrefixHeader_pch */

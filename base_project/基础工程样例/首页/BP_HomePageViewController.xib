@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BP_HomePageViewController">
             <connections>
+                <outlet property="TestBT" destination="DnM-GB-VEC" id="ywZ-IC-tJa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +17,99 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="郑州云峰计算机科技有限公司" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRZ-By-v8S">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Rxo-zh-2mk"/>
+                        <constraint firstAttribute="width" constant="298" id="TFU-HK-Bsd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Rxo-zh-2mk"/>
+                            <exclude reference="TFU-HK-Bsd"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="Rxo-zh-2mk"/>
+                            <include reference="TFU-HK-Bsd"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybu-Sn-P3n">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="VuQ-KU-i8V"/>
+                        <constraint firstAttribute="height" constant="22" id="b3F-GP-sPL"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VuQ-KU-i8V"/>
+                            <exclude reference="b3F-GP-sPL"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="VuQ-KU-i8V"/>
+                            <include reference="b3F-GP-sPL"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnM-GB-VEC" customClass="ALOCenteredButton">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Button" image="btn_img">
+                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="heightClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="75" y="258" width="259" height="233"/>
+                    </variation>
+                    <connections>
+                        <action selector="arbt:" destination="-1" eventType="touchUpInside" id="jAv-wC-NPQ"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ybu-Sn-P3n" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="Sb8-T3-Pde"/>
+                <constraint firstItem="BRZ-By-v8S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="djw-1u-1ea"/>
+                <constraint firstItem="BRZ-By-v8S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m67-6y-Wnm"/>
+                <constraint firstItem="Ybu-Sn-P3n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="yfV-Dx-78j"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="BRZ-By-v8S"/>
+                    <exclude reference="Ybu-Sn-P3n"/>
+                    <exclude reference="DnM-GB-VEC"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Sb8-T3-Pde"/>
+                    <exclude reference="yfV-Dx-78j"/>
+                    <exclude reference="djw-1u-1ea"/>
+                    <exclude reference="m67-6y-Wnm"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="subviews">
+                    <include reference="BRZ-By-v8S"/>
+                    <include reference="Ybu-Sn-P3n"/>
+                    <include reference="DnM-GB-VEC"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Sb8-T3-Pde"/>
+                    <include reference="yfV-Dx-78j"/>
+                    <include reference="djw-1u-1ea"/>
+                    <include reference="m67-6y-Wnm"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="498" y="371"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn_img" width="71" height="71"/>
+    </resources>
 </document>

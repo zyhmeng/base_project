@@ -1,7 +1,7 @@
 //
 //  AppDelegate.m
 //  base_project
-//
+//  
 //  Created by jangbuk on 15/10/30.
 //  Copyright © 2015年 jangbuk. All rights reserved.
 //
@@ -19,8 +19,11 @@
     // Override point for customization after application launch.
     
     self.window =[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     BP_HomePageViewController *BP_HomeVC =[[BP_HomePageViewController alloc] initWithNibName:@"BP_HomePageViewController" bundle:nil];
+    
     self.window.rootViewController = BP_HomeVC;
+    
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -47,11 +50,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
+    //[self saveContext];
 }
 
 #pragma mark - Core Data stack
-
+/*
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
@@ -129,5 +132,5 @@
         }
     }
 }
-
+*/
 @end
