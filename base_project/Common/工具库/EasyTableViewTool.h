@@ -32,14 +32,14 @@
 -(void)easyTableViewSelectedObject:(id)object AtIndex:(NSInteger)index;
 
 /**
- *  设置Cell样式
+ *  设置Cell样式 并 匹配数据 后返回
  *
  *  @param object 该行需要展示的数据模型
  *  @param index  索引
  *
  *  @return 自定义TableViewCell类型的实例
  */
--(id)easyTableViewCellFitByObject:(id)object AtIndex:(NSInteger)index;
+-(UITableViewCell*)easyTableViewCellFitByObject:(id)object AtIndex:(NSInteger)index;
 @end
 
 //代理执行类
