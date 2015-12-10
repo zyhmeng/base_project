@@ -60,16 +60,17 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "POP.h"
 #import "NSObject+CYJSONValidator.h"
-#import "Common/MBProgressHUD/MBProgressHUD.h"
+#import "MBProgressHUD.h"
 #import "HttpTool.h"
-#import "Common/FMDB/fmdb/FMDB.h"
-#import "Common/JSONKit/JSONKit.h"
-#import "Common/SDWebImage/UIImageView+WebCache.h"
-#import "Common/MJRefresh/MJRefresh.h"
-#import "Common/MJExtension/MJExtension.h"
-#import "Common/AFN2.0/AFNetworking/AFNetworking.h"
-#import "Common/MZTimerLabel/MZTimerLabel.h"
-//#import "Common/UMSocial_Sdk_4.2.3/Header/UMSocial.h"
+#import "FMDB.h"
+#import "JSONKit.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "AFNetworking.h"
+#import "MZTimerLabel.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import "WXApi.h"
 
 //全局变量
 //extern UserModel *g_user_model;//用户信息

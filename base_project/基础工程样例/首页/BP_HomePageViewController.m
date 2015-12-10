@@ -71,12 +71,9 @@
     
     points = @[ london, pekin, mos];
 
-    [HttpTool Post:@"UserLogin" RequestSerializerType:RequestSerializerTypeHTTP Params:nil  UseCache:YES HttpHeaderToken:@"" Success:^(id json) {
-   
-    } Failure:^(NSString *error) {
-        
-    }];
     
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,6 +91,9 @@
 }
 */
 - (IBAction)arbt:(id)sender {
+    
+    
+    /*
     // Create the location
     CLLocation *location = [[CLLocation alloc] initWithLatitude:51.500622 longitude:-0.126662];
     ARGeoCoordinate *london = [ARGeoCoordinate coordinateWithLocation:location];
@@ -111,6 +111,20 @@
     
     
     [engine startListening];
+     */
+    
+/*
+    [PayAction AliPayActionByTradeNo:@"test7456521dd551" ProductDesc:@"111" ProductName:@"111" Amount:@"0.01" success:^(NSString *success) {
+        
+        
+        NSLog(@"%@",success);
+    } failure:^(NSString *error) {
+        NSLog(@"%@",error);
+    }];
+    */
+    
+      [PayAction WeChatPayActionByTradeNo:@"test07yhy44f5g44w84" OrderName:@"测试" andPrice:@"1"];
+    
     
 }
 - (ARObjectView *)viewForCoordinate:(ARGeoCoordinate *)coordinate floorLooking:(BOOL)floorLooking {

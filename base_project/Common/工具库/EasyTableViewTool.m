@@ -39,7 +39,6 @@
     return self.easyTableViewHeight;
 }
 
-
 //点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

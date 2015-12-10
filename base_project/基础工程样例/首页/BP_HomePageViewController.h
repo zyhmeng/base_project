@@ -11,6 +11,7 @@
 #import "UIImage+YF.h"
 #import "ARKit.h"
 
+#import "PayAction.h"
 @interface BP_HomePageViewController : UIViewController<ARViewDelegate>
 {
     NSArray *points;

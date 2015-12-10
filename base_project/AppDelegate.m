@@ -26,6 +26,9 @@
     
     [self.window makeKeyAndVisible];
     
+    
+    [WXApi registerApp:@"wx7d09cdaa382814f1" withDescription:@"weChatDemo"];
+    
     return YES;
 }
 
@@ -52,6 +55,10 @@
     // Saves changes in the application's managed object context before the application terminates.
     //[self saveContext];
 }
+
+
+
+
 
 #pragma mark - Core Data stack
 /*

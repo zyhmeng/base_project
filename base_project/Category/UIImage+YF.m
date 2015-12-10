@@ -26,6 +26,9 @@
     return smallImage;
     
 }
+
+
+
 //等比例缩放
 -(UIImage*)scaleToSize:(CGSize)size
 {
