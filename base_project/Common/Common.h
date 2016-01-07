@@ -32,6 +32,8 @@
 //判断密码
 +(BOOL)CheckIsIncludeNumAndWord:(NSString *)str;
 
+
+
 //设置NAV BAR
 +(void)SetNav:(UINavigationBar *)bar;
 
@@ -46,6 +48,9 @@
 
 //UIColor 转 UIImage
 + (UIImage *)createImageWithColor:(UIColor *)color;
+
+//md5加密
++(NSString *) md5: (NSString *) inPutText;
 
 //字符串转时间
 +(NSDate *)dateFromString:(NSString *)dateString;

@@ -34,6 +34,10 @@
 //颜色和透明度设置
 #define RGBA(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
 
+//弹出提醒窗
+#define SHOW_ALERT_VIEW(TITLE, MSG) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TITLE message:MSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+
+
 //HTTP请求头验证
 #define HttpHeaderFieldName @""
 
@@ -44,8 +48,7 @@
 #define UploadServerURL @""
 
 //接口
-//访客
-#define CommonServerURL @"http://101.200.177.177:8080/ostrichvip/app/"
+#define CommonServerURL @""
 
 
 //工厂方法类

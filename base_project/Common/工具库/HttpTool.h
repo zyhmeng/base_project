@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AFHTTPRequestOperation.h"
 //用来封装 上传文件 的数据模型
 @interface FormData : NSObject
 @property(nonatomic,strong)NSData * fileData;//文件数据
@@ -66,6 +66,23 @@ typedef enum{
 
 + (void)Upload:(NSString *)url Params:(NSDictionary *)params DataSource:(FormData *)dataSource Success:(void (^)(id json))success Failure:(void (^)(NSError *error))failure Progress:(void(^)(float percent))percent;
 
+
+/**
+ *  发起一个文件下载并且存入沙河
+ *
+ *  @param paramDic   附加post参数
+ *  @param requestURL 请求地址
+ *  @param savedPath  保存 在磁盘的位置
+ *  @param success    下载成功回调
+ *  @param failure    下载失败回调
+ *  @param progress   实时下载进度回调
+ */
++(void)DownloadFileWithOption:(NSDictionary *)paramDic
+                 withInferface:(NSString*)requestURL
+                     savedPath:(NSString*)savedPath
+               downloadSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+               downloadFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+                      progress:(void (^)(float progress))progress;
 @end
 
 

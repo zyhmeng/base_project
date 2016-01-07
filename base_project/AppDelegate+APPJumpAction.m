@@ -4,7 +4,7 @@
 //
 //  Created by zyh on 15/12/8.
 //  Copyright © 2015年 zyh. All rights reserved.
-//
+//  
 
 #import "AppDelegate+APPJumpAction.h"
 
@@ -14,7 +14,7 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    
+
     //支付宝回调
     [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
         

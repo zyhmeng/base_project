@@ -74,6 +74,8 @@
     
     
 
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,20 +115,41 @@
     [engine startListening];
      */
     
-/*
-    [PayAction AliPayActionByTradeNo:@"test7456521dd551" ProductDesc:@"111" ProductName:@"111" Amount:@"0.01" success:^(NSString *success) {
+    /*
+    [PayAction AliPayActionByTradeNo:@"test7456521dd551" ProductDesc:@"测试" ProductName:@"苹果手机" Amount:@"0.01" success:^(NSString *success) {
         
         
         NSLog(@"%@",success);
     } failure:^(NSString *error) {
         NSLog(@"%@",error);
     }];
-    */
+     */
+    
+    
+    
+/*
     
       [PayAction WeChatPayActionByTradeNo:@"test07yhy44f5g44w84" OrderName:@"测试" andPrice:@"1"];
     
+    */
     
+    
+    NSLog(@"%@",[Common md5:@"66666628LH48"]);
+    
+    NSString *savedPath = [NSHomeDirectory() stringByAppendingString:@"/Documents/QQ7.6.exe"];
+    //    NSDictionary *paramaterDic= @{@"jsonString":[@{@"userid":@"2332"} JSONString]?:@""};
+    [HttpTool DownloadFileWithOption:@{@"userid":@"123123"}
+                   withInferface:@"http://dldir1.qq.com/qqfile/qq/QQ7.6/15742/QQ7.6.exe"
+                       savedPath:savedPath
+                 downloadSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     NSLog(@"%@",@"下载完成");
+                 } downloadFailure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     NSLog(@"下载失败");
+                 } progress:^(float progress) {
+                     NSLog(@"%f",progress);
+                 }];
 }
+
 - (ARObjectView *)viewForCoordinate:(ARGeoCoordinate *)coordinate floorLooking:(BOOL)floorLooking {
     NSString *text = (NSString *)coordinate.dataObject;
     
