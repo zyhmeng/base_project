@@ -57,7 +57,7 @@ typedef enum{
  *  发送一个POST请求
  *
  *  @param url     请求路径
- *  @param params  请求参数
+ *  @param params  请求附加参数
  *  @param formData 文件参数 需传入fileData fileName(xxx.jpg)
  *  @param success 请求成功后的回调（请将请求成功后想做的事情写到这个block中）
  *  @param failure 请求失败后的回调（请将请求失败后想做的事情写到这个block中）

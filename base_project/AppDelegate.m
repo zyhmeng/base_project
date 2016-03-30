@@ -26,7 +26,6 @@
     
     [self.window makeKeyAndVisible];
     
-
     [WXApi registerApp:@"wx7d09cdaa382814f1" withDescription:@"weChatDemo"];
     
     return YES;

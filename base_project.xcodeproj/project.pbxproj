@@ -73,6 +73,9 @@
 		8438DAE01C0EC1EA00E1533C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8438DAD31C0EC1EA00E1533C /* AMap.bundle */; };
 		8438DAE11C0EC1EA00E1533C /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8438DAD51C0EC1EA00E1533C /* MAMapKit.framework */; };
 		8438DAE21C0EC1EA00E1533C /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8438DAD71C0EC1EA00E1533C /* AMapLocationKit.framework */; };
+		843BC5C91C83EE2700C0BEDE /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 843BC5C81C83EE2700C0BEDE /* 5.jpg */; };
+		8468C0BF1C8E7F3F00A192E4 /* NSDictionary+YF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C0BE1C8E7F3F00A192E4 /* NSDictionary+YF.m */; };
+		8472D71B1C7F00E900DF100A /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8472D71A1C7F00E900DF100A /* abc.png */; };
 		84A064B41C168D5A005132AB /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84A064AE1C168D5A005132AB /* ApiXml.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84A064B51C168D5A005132AB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A064AF1C168D5A005132AB /* libWeChatSDK.a */; };
 		84A064B61C168D5B005132AB /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84A064B31C168D5A005132AB /* WXUtil.mm */; };
@@ -403,6 +406,10 @@
 		8438DAD31C0EC1EA00E1533C /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		8438DAD51C0EC1EA00E1533C /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		8438DAD71C0EC1EA00E1533C /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
+		843BC5C81C83EE2700C0BEDE /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		8468C0BD1C8E7F3F00A192E4 /* NSDictionary+YF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YF.h"; sourceTree = "<group>"; };
+		8468C0BE1C8E7F3F00A192E4 /* NSDictionary+YF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YF.m"; sourceTree = "<group>"; };
+		8472D71A1C7F00E900DF100A /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
 		84A064AD1C168D5A005132AB /* ApiXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiXml.h; sourceTree = "<group>"; };
 		84A064AE1C168D5A005132AB /* ApiXml.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ApiXml.mm; sourceTree = "<group>"; };
 		84A064AF1C168D5A005132AB /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -1093,6 +1100,8 @@
 		84BD2B9F1BE30B5D006E93A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				843BC5C81C83EE2700C0BEDE /* 5.jpg */,
+				8472D71A1C7F00E900DF100A /* abc.png */,
 				84F8310B1BE71444002F36C5 /* Default-568h@2x.png */,
 				84BD2D471BE322A6006E93A1 /* PrefixHeader.pch */,
 				84BD2BA01BE30B5D006E93A1 /* main.m */,
@@ -1623,6 +1632,8 @@
 			children = (
 				84EEAECD1BEC3CB600577612 /* UIImage+YF.h */,
 				84EEAECE1BEC3CB600577612 /* UIImage+YF.m */,
+				8468C0BD1C8E7F3F00A192E4 /* NSDictionary+YF.h */,
+				8468C0BE1C8E7F3F00A192E4 /* NSDictionary+YF.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1751,6 +1762,7 @@
 				84324D651BF9B9F700D10FA2 /* CollectionReusableView.xib in Resources */,
 				8425E1B71BFED14A0094DF28 /* ar_arrow.png in Resources */,
 				8410A11C1C101F8C004A0425 /* AlipaySDK.bundle in Resources */,
+				843BC5C91C83EE2700C0BEDE /* 5.jpg in Resources */,
 				8425E1B31BFED0A20094DF28 /* Default@2x.png in Resources */,
 				8425E1B41BFED0A20094DF28 /* radar.png in Resources */,
 				8438DAE01C0EC1EA00E1533C /* AMap.bundle in Resources */,
@@ -1758,6 +1770,7 @@
 				84BD2BAA1BE30B5D006E93A1 /* Main.storyboard in Resources */,
 				84324D631BF9B9F700D10FA2 /* BCollectionViewCell.xib in Resources */,
 				84324D611BF9B9F700D10FA2 /* ACollectionViewCell.xib in Resources */,
+				8472D71B1C7F00E900DF100A /* abc.png in Resources */,
 				8425E1AF1BFED0A20094DF28 /* box.png in Resources */,
 				84F8310C1BE71444002F36C5 /* Default-568h@2x.png in Resources */,
 			);
@@ -1839,6 +1852,7 @@
 				8425E19F1BFECCE00094DF28 /* ARKitConfig.m in Sources */,
 				8410A1271C101F8C004A0425 /* RSADataSigner.m in Sources */,
 				8425E1A11BFECCE00094DF28 /* LocalizationHelper.m in Sources */,
+				8468C0BF1C8E7F3F00A192E4 /* NSDictionary+YF.m in Sources */,
 				84BD2D0D1BE32131006E93A1 /* MJRefreshHeader.m in Sources */,
 				84BD2D3F1BE32131006E93A1 /* SDWebImagePrefetcher.m in Sources */,
 				8410A12E1C102011004A0425 /* PayAction.m in Sources */,

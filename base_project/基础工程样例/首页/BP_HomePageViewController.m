@@ -133,7 +133,7 @@
     
     */
     
-    
+    /*
     NSLog(@"%@",[Common md5:@"66666628LH48"]);
     
     NSString *savedPath = [NSHomeDirectory() stringByAppendingString:@"/Documents/QQ7.6.exe"];
@@ -148,6 +148,41 @@
                  } progress:^(float progress) {
                      NSLog(@"%f",progress);
                  }];
+     */
+    /*
+    FormData *uploadData=[[FormData alloc] init];
+
+    uploadData.fileName=@"5.jpg";
+    
+    
+    NSData *data = UIImageJPEGRepresentation(self.TestBT.imageView.image,1.0);
+    uploadData.fileData=data;
+    NSDictionary *dic=@{@"name": @""};
+    [HttpTool Upload:@"http://s3.xtox.net:8180/qianxun/fileUpload/userHead" Params:dic DataSource:uploadData Success:^(id json) {
+        NSLog(@"%@",json);
+    } Failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    } Progress:^(float percent) {
+        NSLog(@"%f",percent);
+    }];
+    */
+    
+    
+    NSString *str=@"{\"aaa\":\"<null>\",\"bbb\":100}";
+    
+   id abc= [str objectFromJSONString];
+
+    NSLog(@"%@",abc);
+    
+    NSDictionary *dic1=[NSDictionary changeType:abc];
+    NSLog(@"%@",dic1);
+    
+    
+    NSDate *date=  [[NSDate alloc]init];
+    
+    
+    
+    
 }
 
 - (ARObjectView *)viewForCoordinate:(ARGeoCoordinate *)coordinate floorLooking:(BOOL)floorLooking {
@@ -203,4 +238,17 @@
         // The user has began looking front
     }
 }
+
+#if 6 < 15
+- (BOOL)isConcurrent {
+    return YES;
+}
+
+#else
+
+- (BOOL)isAsynchronous {
+    return YES;
+}
+#endif
+
 @end

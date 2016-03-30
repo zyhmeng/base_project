@@ -33,6 +33,7 @@
 
 #define AliPay_AppScheme @"baseproject"//info.plist 中配置的跳转信息
 #pragma mark--微信支付
+
 /**
  *  将微信支付的配置信息 写入对应的宏定义里
  */

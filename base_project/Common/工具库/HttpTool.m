@@ -140,14 +140,26 @@
     AFHTTPRequestOperationManager * mgr = [AFHTTPRequestOperationManager manager];
     mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
 
+    
+    
     AFHTTPRequestOperation *operation= [mgr POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
         [formData appendPartWithFileData:dataSource.fileData name:dataSource.name fileName:dataSource.fileName mimeType:dataSource.fileType];
+        
+        //NSURL *filePath =[[NSBundle mainBundle] URLForResource:@"abc" withExtension:@"png"];
+        
+        
+        //[formData appendPartWithFileURL:filePath name:@"file" fileName:[NSString stringWithFormat:@"%@.png",@"abc"] mimeType:@"image/png" error:nil];
+        
+        
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
         if (success) {
             
             NSString *jsonString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
             
-            success([jsonString JSONObject]);
+            success([jsonString mj_JSONObject]);
             
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -233,8 +245,9 @@
 {
     self = [super init];
     if (self) {
-        self.fileType=@"";
-        self.name=@"";
+        self.fileType=@"";//文件类型
+        self.name=@"file";//文件接收对应键
+        self.fileName=@"";//文件名
     }
     return self;
 }

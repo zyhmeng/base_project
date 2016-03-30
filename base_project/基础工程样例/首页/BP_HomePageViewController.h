@@ -10,7 +10,7 @@
 #import "ALOCenteredButton.h"
 #import "UIImage+YF.h"
 #import "ARKit.h"
-
+#import "NSDictionary+YF.h"
 #import "PayAction.h"
 @interface BP_HomePageViewController : UIViewController<ARViewDelegate>
 {
@@ -22,4 +22,5 @@
 }
 
 @property (strong, nonatomic) IBOutlet ALOCenteredButton *TestBT;
+
 @end
