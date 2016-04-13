@@ -177,12 +177,7 @@
     NSDictionary *dic1=[NSDictionary changeType:abc];
     NSLog(@"%@",dic1);
     
-    
-    NSDate *date=  [[NSDate alloc]init];
-    
-    
-    
-    
+
 }
 
 - (ARObjectView *)viewForCoordinate:(ARGeoCoordinate *)coordinate floorLooking:(BOOL)floorLooking {

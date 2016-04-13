@@ -62,7 +62,6 @@
 #import "EGOCache.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "POP.h"
-#import "NSObject+CYJSONValidator.h"
 #import "MBProgressHUD.h"
 #import "HttpTool.h"
 #import "FMDB.h"
