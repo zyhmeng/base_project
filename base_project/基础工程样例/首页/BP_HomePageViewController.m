@@ -8,6 +8,8 @@
 
 #import "BP_HomePageViewController.h"
 #import "UIImage+YF.h"
+
+#import "YFNetworking.h"
 @interface BP_HomePageViewController ()
 
 //功能模块儿列表
@@ -167,7 +169,7 @@
     }];
     */
     
-    
+    /*
     NSString *str=@"{\"aaa\":\"<null>\",\"bbb\":100}";
     
    id abc= [str objectFromJSONString];
@@ -176,8 +178,25 @@
     
     NSDictionary *dic1=[NSDictionary changeType:abc];
     NSLog(@"%@",dic1);
+     */
     
-
+    //YFNetworking设置项目
+    [YFNetworking enableInterfaceDebug:YES];
+    [YFNetworking configRequestType:YFRequestTypeJSON responseType:YFResponseTypeJSON shouldAutoEncodeUrl:NO callbackOnCancelRequest:YES];
+    [YFNetworking cacheGetRequest:YES shoulCachePost:YES];
+    [YFNetworking updateBaseUrl:@"http://s3.xtox.net:8180/platform/api"];
+    
+    //调用
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:@"8801" forKey:@"cmd"];
+    
+    [YFNetworking postWithUrl:nil refreshCache:NO params:dict success:^(id response) {
+        
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+    
 }
 
 - (ARObjectView *)viewForCoordinate:(ARGeoCoordinate *)coordinate floorLooking:(BOOL)floorLooking {

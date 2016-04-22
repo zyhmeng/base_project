@@ -63,7 +63,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "POP.h"
 #import "MBProgressHUD.h"
-#import "HttpTool.h"
+
 #import "FMDB.h"
 #import "JSONKit.h"
 #import "UIImageView+WebCache.h"
