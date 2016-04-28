@@ -828,9 +828,6 @@ static inline NSString *cachePath() {
       back=path;
   }
     
-    
-  
-    
   if ([self baseUrl] == nil || [[self baseUrl] length] == 0) {
     front=@"";
   }else

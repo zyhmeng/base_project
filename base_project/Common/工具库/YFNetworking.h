@@ -19,7 +19,7 @@
 #endif
 
 /*!
- *  @author jangbuk, 16-01-08 14:01:26
+ *  @author jangbuk
  *
  *  下载进度
  *
@@ -34,7 +34,7 @@ typedef YFDownloadProgress YFGetProgress;
 typedef YFDownloadProgress YFPostProgress;
 
 /*!
- *  @author jangbuk, 16-01-08 14:01:26
+ *  @author jangbuk
  *
  *  上传进度
  *
@@ -66,7 +66,7 @@ typedef void(^YFResponseSuccess)(id response);
 typedef void(^YFResponseFail)(NSError *error);
 
 /*!
- *  @author jangbuk, 15-11-15 13:11:31
+ *  @author jangbuk
  *
  *  基于AFNetworking的网络层封装类.
  *
@@ -78,7 +78,7 @@ typedef void(^YFResponseFail)(NSError *error);
 
 #pragma mark--设置开启或关闭接口打印信息
 /*!
- *  @author jangbuk, 15-11-15 14:11:40
+ *  @author jangbuk
  *
  *  开启或关闭接口打印信息
  *
@@ -88,7 +88,7 @@ typedef void(^YFResponseFail)(NSError *error);
 
 #pragma mark--设置网络接口的基础地址
 /*!
- *  @author jangbuk, 15-11-15 13:11:45
+ *  @author jangbuk
  *
  *  用于指定网络请求接口的基础url，如：
  *  http://s3.xtox.net或者http://192.168.1.1
@@ -111,8 +111,22 @@ typedef void(^YFResponseFail)(NSError *error);
  *
  *	@param isCacheGet			默认为YES
  *	@param shouldCachePost	默认为NO
- */ 
+ */
+
 + (void)cacheGetRequest:(BOOL)isCacheGet shoulCachePost:(BOOL)shouldCachePost;
+
+
+/**
+ *	@author jangbuk
+ *
+ *	获取已缓存过的网络数据
+
+ *
+ *	@param url			请求地址
+ *	@param params       请求参数
+ */
+
++ (id)cahceResponseWithURL:(NSString *)url parameters:params;
 
 /**
  *	@author jangbuk
@@ -136,7 +150,7 @@ typedef void(^YFResponseFail)(NSError *error);
 #pragma mark--设置网络请求、响应、头地址
 
 /*!
- *  @author jangbuk, 15-12-25 15:12:45
+ *  @author jangbuk
  *
  *  配置请求格式，默认为JSON。如果要求传XML或者PLIST，请在全局配置一下
  *
@@ -151,19 +165,23 @@ typedef void(^YFResponseFail)(NSError *error);
   callbackOnCancelRequest:(BOOL)shouldCallbackOnCancelRequest;
 
 /*!
- *  @author jangbuk, 15-11-16 13:11:41
+ *  @author jangbuk
  *
  *  配置公共的请求头，只调用一次即可，通常放在应用启动的时候配置就可以了
  *
  *  @param httpHeaders 只需要将与服务器商定的固定参数设置即可
  */
+
 + (void)configCommonHttpHeaders:(NSDictionary *)httpHeaders;
 
+
+#pragma mark--请求队列处理
 /**
  *	@author jangbuk
  *
  *	取消所有请求
  */
+
 + (void)cancelAllRequest;
 /**
  *	@author jangbuk
@@ -173,10 +191,14 @@ typedef void(^YFResponseFail)(NSError *error);
  *
  *	@param url				URL，可以是绝对URL，也可以是path（也就是不包括baseurl）
  */
+
 + (void)cancelRequestWithURL:(NSString *)url;
 
+
+#pragma mark--http get方法
+
 /*!
- *  @author jangbuk, 15-11-15 13:11:50
+ *  @author jangbuk
  *
  *  GET请求接口，若不指定baseurl，可传完整的url
  *
@@ -206,8 +228,11 @@ typedef void(^YFResponseFail)(NSError *error);
                           success:(YFResponseSuccess)success
                              fail:(YFResponseFail)fail;
 
+
+
+#pragma mark--http post 方法
 /*!
- *  @author jangbuk, 15-11-15 13:11:50
+ *  @author jangbuk
  *
  *  POST请求接口，若不指定baseurl，可传完整的url
  *
@@ -223,14 +248,17 @@ typedef void(^YFResponseFail)(NSError *error);
                             params:(NSDictionary *)params
                            success:(YFResponseSuccess)success
                               fail:(YFResponseFail)fail;
+
 + (YFURLSessionTask *)postWithUrl:(NSString *)url
                       refreshCache:(BOOL)refreshCache
                             params:(NSDictionary *)params
                           progress:(YFPostProgress)progress
                            success:(YFResponseSuccess)success
                               fail:(YFResponseFail)fail;
+
+#pragma mark--图片、文件上传
 /**
- *	@author jangbuk, 16-01-31 00:01:40
+ *	@author jangbuk
  *
  *	图片上传接口，若不指定baseurl，可传完整的url
  *
@@ -242,10 +270,13 @@ typedef void(^YFResponseFail)(NSError *error);
  *	@param parameters	参数
  *	@param progress		上传进度
  *	@param success		上传成功回调
- *	@param fail				上传失败回调
+ *	@param fail			上传失败回调
  *
  *	@return
  */
+
+
+
 + (YFURLSessionTask *)uploadWithImage:(UIImage *)image
                                    url:(NSString *)url
                               filename:(NSString *)filename
@@ -257,27 +288,30 @@ typedef void(^YFResponseFail)(NSError *error);
                                   fail:(YFResponseFail)fail;
 
 /**
- *	@author jangbuk, 16-01-31 00:01:59
+ *	@author jangbuk
  *
  *	上传文件操作
  *
- *	@param url						上传路径
- *	@param uploadingFile	待上传文件的路径
- *	@param progress			上传进度
+ *	@param url                  上传路径
+ *	@param uploadingFile        待上传文件的路径
+ *	@param progress             上传进度
  *	@param success				上传成功回调
  *	@param fail					上传失败回调
  *
  *	@return
  */
+
 + (YFURLSessionTask *)uploadFileWithUrl:(NSString *)url
                            uploadingFile:(NSString *)uploadingFile
                                 progress:(YFUploadProgress)progress
                                  success:(YFResponseSuccess)success
                                     fail:(YFResponseFail)fail;
 
+#pragma mark--文件下载
+
 
 /*!
- *  @author jangbuk, 16-01-08 15:01:11
+ *  @author jangbuk
  *
  *  下载文件
  *

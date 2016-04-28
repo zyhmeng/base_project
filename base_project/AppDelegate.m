@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "YFNetworking.h"
 @interface AppDelegate ()
 
 @end
@@ -27,6 +27,17 @@
     [self.window makeKeyAndVisible];
     
     [WXApi registerApp:@"wx7d09cdaa382814f1" withDescription:@"weChatDemo"];
+    
+    //YFNetworking设置项目
+    
+    [YFNetworking enableInterfaceDebug:YES];
+    
+    [YFNetworking configRequestType:YFRequestTypeJSON responseType:YFResponseTypeJSON shouldAutoEncodeUrl:NO callbackOnCancelRequest:YES];
+    
+    [YFNetworking cacheGetRequest:YES shoulCachePost:YES];
+    
+    [YFNetworking updateBaseUrl:@"http://s3.xtox.net:8180/platform/api"];
+    
     
     return YES;
     
