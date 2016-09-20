@@ -460,17 +460,18 @@ static inline NSString *cachePath() {
       return nil;
     }
   }
-  
+  /*
   if ([self shouldEncode]) {
     url = [self encodeUrl:url];
   }
   
   NSString *absolute = [self absoluteUrlWithPath:url];
-
+*/
   AFHTTPSessionManager *manager = [self manager];
   YFURLSessionTask *session = [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+      
     NSData *imageData = UIImageJPEGRepresentation(image, 1);
-    
+    /*
     NSString *imageFileName = filename;
     if (filename == nil || ![filename isKindOfClass:[NSString class]] || filename.length == 0) {
       NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -478,9 +479,9 @@ static inline NSString *cachePath() {
       NSString *str = [formatter stringFromDate:[NSDate date]];
       imageFileName = [NSString stringWithFormat:@"%@.jpg", str];
     }
-    
+    */
     // 上传图片，以文件流的格式
-    [formData appendPartWithFileData:imageData name:name fileName:imageFileName mimeType:mimeType];
+    [formData appendPartWithFileData:imageData name:name fileName:filename mimeType:mimeType];
   } progress:^(NSProgress * _Nonnull uploadProgress) {
     if (progress) {
       progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
@@ -491,7 +492,7 @@ static inline NSString *cachePath() {
     
     if ([self isDebug]) {
       [self logWithSuccessResponse:responseObject
-                               url:absolute
+                               url:url
                             params:parameters];
     }
   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -500,7 +501,7 @@ static inline NSString *cachePath() {
     [self handleCallbackWithError:error fail:fail];
     
     if ([self isDebug]) {
-      [self logWithFailError:error url:absolute params:nil];
+      [self logWithFailError:error url:url params:nil];
     }
   }];
   
