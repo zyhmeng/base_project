@@ -10,11 +10,12 @@
 
 @implementation AppDelegate (APPJumpAction)
 
+
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-
+    
     //支付宝回调
     [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
         
@@ -28,7 +29,7 @@
 }
 
 
-#pragma mark - 微信支付回调函数
+#pragma mark - 微信回调函数
 - (void)onResp:(BaseResp *)resp
 {
     if([resp isKindOfClass:[PayResp class]]){
@@ -51,4 +52,8 @@
     }
 }
 
+-(void)abc
+{
+   [WXApi registerApp:@"wx7d09cdaa382814f1" withDescription:@"weChatDemo"];
+}
 @end

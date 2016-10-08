@@ -1,0 +1,23 @@
+//
+//  UmengLoginShareConfig.pch
+//  UmengLoginAndShare
+//
+//  Created by Liumingfei on 16/9/29.
+//  Copyright © 2016年 LiuMingFei. All rights reserved.
+//
+
+
+
+
+#ifndef UmengLoginShareConfig_h
+#define UmengLoginShareConfig_h
+
+#define UMENG_APPKEY @"53da01d056240bd5820003de"//umeng_key
+#define WXAPPID @"wxafb9755dc40ef45d"//微信APPID
+#define WXSecret @"b43bb239256acb36a1d93afaf9708fd3"//微信Secret
+#define QQAPPID @"1105580549"//QQ APPID
+#define QQSecret @"0G02AJx7jzk42EvI"//QQ Secret
+#define SinaAppKey @""//微博APPID
+#define SinaSecret @""//微博Secret
+
+#endif /* UmengLoginShareConfig_h */

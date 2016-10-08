@@ -220,9 +220,18 @@
     }];
      */
     
-    [self uploadImage];
+   // [self uploadImage];
+    
+    BPHomeViewController *hvc=[[BPHomeViewController alloc] init];
+    [self.navigationController pushViewController:hvc animated:YES];
+    
+    
+
+    
     
 }
+
+
 
 - (ARObjectView *)viewForCoordinate:(ARGeoCoordinate *)coordinate floorLooking:(BOOL)floorLooking {
     NSString *text = (NSString *)coordinate.dataObject;

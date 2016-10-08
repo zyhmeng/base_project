@@ -97,6 +97,18 @@
 //微信支付step1  选择商品下单
 +(void)WeChatPayActionByTradeNo:(NSString *)tradeNo OrderName:(NSString *)orderName andPrice:(NSString *)price
 {
+     [WXApi registerApp:WeChat_App_ID withDescription:@"weChatDemo"];
+    
+    
+    if ([WXApi isWXAppInstalled]==NO) {
+        UIAlertView *av=[[UIAlertView alloc] initWithTitle:@"未安装微信" message:@"请先安装微信客户端" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [av show];
+        return;
+    }
+    
+    
+    
+    
     //1. 创建支付签名对象
     PayRequsestHandler *req = [[PayRequsestHandler alloc] init];
     //  初始化支付签名对象

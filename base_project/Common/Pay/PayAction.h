@@ -25,7 +25,7 @@
                      failure:(void(^)(NSString *error))failure;
 
 /**
- *  支付宝支付静态方法
+ *  微信支付静态方法
  *
  *  @param tradeNo     商户订单号
  *  @param orderName   订单标题，展示给用户

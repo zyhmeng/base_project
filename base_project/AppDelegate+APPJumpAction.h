@@ -10,5 +10,4 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate (APPJumpAction)
-
 @end

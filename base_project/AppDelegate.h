@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "BP_HomePageViewController.h"
+#import "BPHomeViewController.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WXApiDelegate>
