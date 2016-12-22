@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06714E9F1E0B6DDA00C174D5 /* ImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */; };
+		06714EA21E0B6E9F00C174D5 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EA11E0B6E9F00C174D5 /* PhotoView.m */; };
+		06945DE81E01244400DA82D9 /* YFPhotoShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06945DE71E01244400DA82D9 /* YFPhotoShowView.m */; };
+		06945DEB1E01247000DA82D9 /* YFPhotoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06945DEA1E01247000DA82D9 /* YFPhotoShowViewController.m */; };
+		06945DEF1E012C4600DA82D9 /* YFPhotoShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06945DED1E012C4600DA82D9 /* YFPhotoShowCell.m */; };
+		06945DF01E012C4600DA82D9 /* YFPhotoShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06945DEE1E012C4600DA82D9 /* YFPhotoShowCell.xib */; };
+		06FF81F81E0A1374001FA713 /* YFPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF81F71E0A1374001FA713 /* YFPhotoModel.m */; };
 		840A03CF1D92732A00BBDA8A /* UINavigationController+PUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A03CE1D92732A00BBDA8A /* UINavigationController+PUSH.m */; };
 		8410A11C1C101F8C004A0425 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8410A0B81C101F8C004A0425 /* AlipaySDK.bundle */; };
 		8410A11D1C101F8C004A0425 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8410A0B91C101F8C004A0425 /* AlipaySDK.framework */; };
@@ -248,6 +255,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06714E9D1E0B6DDA00C174D5 /* ImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserViewController.h; sourceTree = "<group>"; };
+		06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserViewController.m; sourceTree = "<group>"; };
+		06714EA01E0B6E9F00C174D5 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
+		06714EA11E0B6E9F00C174D5 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
+		06945DE61E01244400DA82D9 /* YFPhotoShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoShowView.h; sourceTree = "<group>"; };
+		06945DE71E01244400DA82D9 /* YFPhotoShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPhotoShowView.m; sourceTree = "<group>"; };
+		06945DE91E01247000DA82D9 /* YFPhotoShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoShowViewController.h; sourceTree = "<group>"; };
+		06945DEA1E01247000DA82D9 /* YFPhotoShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPhotoShowViewController.m; sourceTree = "<group>"; };
+		06945DEC1E012C4600DA82D9 /* YFPhotoShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoShowCell.h; sourceTree = "<group>"; };
+		06945DED1E012C4600DA82D9 /* YFPhotoShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPhotoShowCell.m; sourceTree = "<group>"; };
+		06945DEE1E012C4600DA82D9 /* YFPhotoShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFPhotoShowCell.xib; sourceTree = "<group>"; };
+		06FF81F61E0A1374001FA713 /* YFPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoModel.h; sourceTree = "<group>"; };
+		06FF81F71E0A1374001FA713 /* YFPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPhotoModel.m; sourceTree = "<group>"; };
 		840A03CD1D92732A00BBDA8A /* UINavigationController+PUSH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PUSH.h"; sourceTree = "<group>"; };
 		840A03CE1D92732A00BBDA8A /* UINavigationController+PUSH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PUSH.m"; sourceTree = "<group>"; };
 		84109FD41C1016A9004A0425 /* PayConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayConfig.h; sourceTree = "<group>"; };
@@ -812,6 +832,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06945DE41E01226B00DA82D9 /* 界面 */ = {
+			isa = PBXGroup;
+			children = (
+				06945DE51E01228A00DA82D9 /* 九宫格图片显示 */,
+				069A966A1E078A1200EC5DE4 /* 选择照片与删除 */,
+			);
+			path = "界面";
+			sourceTree = "<group>";
+		};
+		06945DE51E01228A00DA82D9 /* 九宫格图片显示 */ = {
+			isa = PBXGroup;
+			children = (
+				06945DE91E01247000DA82D9 /* YFPhotoShowViewController.h */,
+				06945DEA1E01247000DA82D9 /* YFPhotoShowViewController.m */,
+				06FF81F61E0A1374001FA713 /* YFPhotoModel.h */,
+				06FF81F71E0A1374001FA713 /* YFPhotoModel.m */,
+				06945DEC1E012C4600DA82D9 /* YFPhotoShowCell.h */,
+				06945DED1E012C4600DA82D9 /* YFPhotoShowCell.m */,
+				06945DEE1E012C4600DA82D9 /* YFPhotoShowCell.xib */,
+				06945DE61E01244400DA82D9 /* YFPhotoShowView.h */,
+				06945DE71E01244400DA82D9 /* YFPhotoShowView.m */,
+				06714E9D1E0B6DDA00C174D5 /* ImageBrowserViewController.h */,
+				06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */,
+				06714EA01E0B6E9F00C174D5 /* PhotoView.h */,
+				06714EA11E0B6E9F00C174D5 /* PhotoView.m */,
+			);
+			path = "九宫格图片显示";
+			sourceTree = "<group>";
+		};
+		069A966A1E078A1200EC5DE4 /* 选择照片与删除 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "选择照片与删除";
+			sourceTree = "<group>";
+		};
 		84109FD11C101588004A0425 /* Pay */ = {
 			isa = PBXGroup;
 			children = (
@@ -1232,6 +1288,7 @@
 				840A03CD1D92732A00BBDA8A /* UINavigationController+PUSH.h */,
 				840A03CE1D92732A00BBDA8A /* UINavigationController+PUSH.m */,
 				84E394C51DA8DBE700F520C1 /* FuncList.plist */,
+				06945DE41E01226B00DA82D9 /* 界面 */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -1979,6 +2036,7 @@
 				84E394B61DA8CED800F520C1 /* README.txt in Resources */,
 				84324D651BF9B9F700D10FA2 /* CollectionReusableView.xib in Resources */,
 				8425E1B71BFED14A0094DF28 /* ar_arrow.png in Resources */,
+				06945DF01E012C4600DA82D9 /* YFPhotoShowCell.xib in Resources */,
 				8410A11C1C101F8C004A0425 /* AlipaySDK.bundle in Resources */,
 				843BC5C91C83EE2700C0BEDE /* 5.jpg in Resources */,
 				8425E1B31BFED0A20094DF28 /* Default@2x.png in Resources */,
@@ -2035,14 +2093,19 @@
 				84BD2CFC1BE32131006E93A1 /* JSONKit.m in Sources */,
 				84BD2D3E1BE32131006E93A1 /* SDWebImageManager.m in Sources */,
 				84F7B95D1CBE206E008381FE /* AFNetworkReachabilityManager.m in Sources */,
+				06714EA21E0B6E9F00C174D5 /* PhotoView.m in Sources */,
 				84BD2D181BE32131006E93A1 /* MJRefreshConst.m in Sources */,
 				84BD2D241BE32131006E93A1 /* POPBasicAnimation.mm in Sources */,
+				06945DEF1E012C4600DA82D9 /* YFPhotoShowCell.m in Sources */,
 				84BD2D131BE32131006E93A1 /* MJRefreshBackStateFooter.m in Sources */,
+				06714E9F1E0B6DDA00C174D5 /* ImageBrowserViewController.m in Sources */,
+				06FF81F81E0A1374001FA713 /* YFPhotoModel.m in Sources */,
 				84F7B9671CBE206E008381FE /* UIImageView+AFNetworking.m in Sources */,
 				84E394BD1DA8CED800F520C1 /* UMSocialShareSelectionView.m in Sources */,
 				84BD2D001BE32131006E93A1 /* MBProgressHUD.m in Sources */,
 				84F7B95F1CBE206E008381FE /* AFURLRequestSerialization.m in Sources */,
 				84BD2D371BE32131006E93A1 /* MKAnnotationView+WebCache.m in Sources */,
+				06945DEB1E01247000DA82D9 /* YFPhotoShowViewController.m in Sources */,
 				84BD2CFA1BE32131006E93A1 /* FMResultSet.m in Sources */,
 				84E394C01DA8CED800F520C1 /* UMSocialUIManager.m in Sources */,
 				8431EE551C2546D600B8F7AB /* MJPropertyKey.m in Sources */,
@@ -2141,6 +2204,7 @@
 				84BD2D411BE32131006E93A1 /* UIImage+GIF.m in Sources */,
 				84BD2D2F1BE32131006E93A1 /* NSData+SDDataCache.m in Sources */,
 				84E394BB1DA8CED800F520C1 /* UMSocialCollectionCell.m in Sources */,
+				06945DE81E01244400DA82D9 /* YFPhotoShowView.m in Sources */,
 				84BD2D461BE32131006E93A1 /* UIView+WebCacheOperation.m in Sources */,
 				84184FDE1C196A2300B6485E /* AppDelegate+APPJumpAction.m in Sources */,
 				8425E1A31BFECCE00094DF28 /* ARObjectView.m in Sources */,

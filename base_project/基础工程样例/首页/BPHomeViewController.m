@@ -7,6 +7,7 @@
 //
 
 #import "BPHomeViewController.h"
+#import "YFPhotoShowViewController.h"
 
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -19,12 +20,13 @@
 @implementation BPHomeViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"FuncList" ofType:@"plist"];
+    
     self.funcList= [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
- 
 
 }
 
@@ -33,26 +35,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)WeiXinPay:(id)sender {
+- (IBAction)WeiXinPay:(id)sender
+{
     int x = arc4random() % 10000000;
     NSString *TradeNum=[NSString stringWithFormat:@"ForTest%d",x];
-    
-    
     
     [PayAction WeChatPayActionByTradeNo:TradeNum OrderName:@"供测试" andPrice:@"1"];
 }
 
-- (IBAction)AliPay:(id)sender {
+- (IBAction)AliPay:(id)sender
+{
     int x = arc4random() % 10000000;
     NSString *TradeNum=[NSString stringWithFormat:@"ForTest%d",x];
     
@@ -98,5 +90,14 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        
+        YFPhotoShowViewController *photoShowVC = [[YFPhotoShowViewController alloc]init];
+        
+        [self.navigationController pushViewController:photoShowVC animated:YES];
+        
+    }
 }
+
 @end

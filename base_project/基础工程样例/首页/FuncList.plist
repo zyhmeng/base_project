@@ -6,7 +6,26 @@
 		<key>desc</key>
 		<string>界面</string>
 		<key>list</key>
-		<array/>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>1_1</string>
+				<key>name</key>
+				<string>九宫格图片显示</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<string>1_1</string>
+				<key>name</key>
+				<string>选择照片显示与删除</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<string>1_3</string>
+				<key>name</key>
+				<string>自定义cell，可以删除列表</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>desc</key>
