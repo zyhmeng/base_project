@@ -42,7 +42,7 @@ typedef enum {
 
 @interface SDCycleScrollView : UIImageView
 
-
+@property (nonatomic, weak) UIControl *pageControl;
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>  数据源接口
 

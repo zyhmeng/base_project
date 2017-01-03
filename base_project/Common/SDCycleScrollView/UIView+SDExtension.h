@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 #define SDColorCreater(r, g, b, a) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:a]
 
 
@@ -18,5 +19,5 @@
 
 @property (nonatomic, assign) CGFloat sd_y;
 @property (nonatomic, assign) CGFloat sd_x;
-
+extern float myWidth;
 @end

@@ -18,6 +18,18 @@
 #define SCALERWIDTH         [UIScreen mainScreen].bounds.size.width/320.0f
 #define SCALERHEIGHT        [UIScreen mainScreen].bounds.size.height/568.0f
 
+
+// 测试服务器
+//请求数据url
+#define CommonURL [CommonURLHeader stringByAppendingString:@"health/api"]
+
+#define CommonURLHeader @"http://s3.xtox.net:8180/"
+
+//#define CommonURLHeader  @"http://health.sd.sgcc.com.cn:8280/"
+
+#define CommonImageUrl [CommonURLHeader stringByAppendingString:@"yf_upload/"]
+
+
 //系统版本判断
 #define UIDEVICE [[UIDevice currentDevice] systemVersion].doubleValue
 
@@ -31,8 +43,14 @@
 
 //全局色值
 #define NAV_COLOR [UIColor colorWithPatternImage:[UIImage imageNamed:@"nav_bg"]]
+
 //颜色和透明度设置
 #define RGBA(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
+
+#define APP_COLOR  RGBA(53, 103, 210, 1)
+#define APP_BLACKCOLOR RGBA(54, 54, 54, 1)
+
+#define DefWeakSelf(name) __weak __typeof(self) name=self
 
 //弹出提醒窗
 #define SHOW_ALERT_VIEW(TITLE, MSG) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TITLE message:MSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
@@ -73,6 +91,10 @@
 #import "MZTimerLabel.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "WXApi.h"
+#import "YFNetworking.h"
+#import "YHRefreshNormalHeader.h"
+#import "YHRefreshBackNormalFooter.h"
+
 
 //全局变量
 //extern UserModel *g_user_model;//用户信息

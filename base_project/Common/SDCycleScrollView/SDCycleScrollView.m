@@ -18,26 +18,22 @@
  
  */
 
-
+float myWidth;
 #import "SDCycleScrollView.h"
 #import "SDCollectionViewCell.h"
 #import "UIView+SDExtension.h"
 #import "TAPageControl.h"
 #import "NSData+SDDataCache.h"
 
-
-
 NSString * const ID = @"cycleCell";
 
 @interface SDCycleScrollView () <UICollectionViewDataSource, UICollectionViewDelegate>
-
 
 @property (nonatomic, weak) UICollectionView *mainView; // 显示图片的collectionView
 @property (nonatomic, weak) UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic, strong) NSMutableArray *imagesGroup;
 @property (nonatomic, weak) NSTimer *timer;
 @property (nonatomic, assign) NSInteger totalItemsCount;
-@property (nonatomic, weak) UIControl *pageControl;
 
 @end
 
@@ -93,6 +89,7 @@ NSString * const ID = @"cycleCell";
 {
     SDCycleScrollView *cycleScrollView = [[self alloc] initWithFrame:frame];
     cycleScrollView.imageURLStringsGroup = [NSMutableArray arrayWithArray:imageURLsGroup];
+    
     return cycleScrollView;
 }
 
@@ -134,6 +131,7 @@ NSString * const ID = @"cycleCell";
     [self setupPageControl];
     if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
         TAPageControl *pageContol = (TAPageControl *)_pageControl;
+        
         pageContol.dotSize = pageControlDotSize;
     }
 }
@@ -261,12 +259,9 @@ NSString * const ID = @"cycleCell";
                                        
                                    }
                                }
-         
          ];
     }
-    
 }
-
 
 - (void)setupPageControl
 {
@@ -358,10 +353,13 @@ NSString * const ID = @"cycleCell";
         TAPageControl *pageControl = (TAPageControl *)_pageControl;
         [pageControl sizeToFit];
     }
+        
+    _pageControl.frame = CGRectMake(x-15, y, size.width, size.height);
     
-    _pageControl.frame = CGRectMake(x, y, size.width, size.height);
     _pageControl.hidden = !_showPageControl;
     
+    //...
+    myWidth =  _pageControl.frame.origin.x - 25;
 }
 
 //解决当父View释放时，当前视图因为被Timer强引用而不能释放的问题
@@ -398,10 +396,19 @@ NSString * const ID = @"cycleCell";
     SDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     long itemIndex = indexPath.item % self.imagesGroup.count;
     UIImage *image = self.imagesGroup[itemIndex];
+    
     if (image.size.width == 0 && self.placeholderImage) {
-        image = self.placeholderImage;
+        
+        cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        cell.imageView.image = self.placeholderImage;
+    }else
+    {
+        cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+        
+        cell.imageView.image = image;
     }
-    cell.imageView.image = image;
+    
     if (_titlesGroup.count) {
         cell.title = _titlesGroup[itemIndex];
     }
@@ -423,7 +430,6 @@ NSString * const ID = @"cycleCell";
         [self.delegate cycleScrollView:self didSelectItemAtIndex:indexPath.item % self.imagesGroup.count];
     }
 }
-
 
 #pragma mark - UIScrollViewDelegate
 

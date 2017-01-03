@@ -89,8 +89,14 @@
     CGFloat titleLabelH = _titleLabelHeight;
     CGFloat titleLabelX = 0;
     CGFloat titleLabelY = self.sd_height - titleLabelH;
-    _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
+//    _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
     _titleLabel.hidden = !_titleLabel.text;
+    
+    //...
+    _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, myWidth, titleLabelH);
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(myWidth, titleLabelY, self.sd_width - myWidth, titleLabelH)];
+    [rightView setBackgroundColor:_titleLabelBackgroundColor];
+    [self addSubview:rightView];
 }
 
 @end

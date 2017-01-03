@@ -1,3 +1,4 @@
+
 //
 //  Common.m
 //  IOSTrain
@@ -9,11 +10,22 @@
 #import "Common.h"
 
 @implementation Common
+
++ (id)GetRequestResultFromResponse:(id)response
+{
+    return [response objectForKey:@"result"];    
+}
+
++ (NSString *)GetErrorStrFromResponse:(id)response
+{
+    return [response objectForKey:@"retDese"];
+}
+
 +(BOOL)IsRequestSuccess:(id)response_object
 {
-    if ([[[response_object objectForKey:@"code"] stringValue]isEqualToString:@"1"]==YES) {
+    if ([[[response_object objectForKey:@"retCode"] stringValue]isEqualToString:@"0"]==YES) {
         return YES;
-    }else if ([[[response_object objectForKey:@"code"] stringValue]isEqualToString:@"1"]==NO)
+    }else if ([[[response_object objectForKey:@"retCode"] stringValue]isEqualToString:@"0"]==NO)
     {
         return NO;
     }else
@@ -22,7 +34,12 @@
 
 +(NSString *)GetResponseMSG:(id)response_object
 {
-    return [response_object objectForKey:@"msg"];
+    return [response_object objectForKey:@"retDese"];
+}
+
++(NSNumber *)GetResponseCode:(id)response_object
+{
+    return [response_object objectForKey:@"retCode"];
 }
 
 +(id)GetResponseData:(id)response_object ByKey:(NSString *)key
@@ -34,9 +51,9 @@
 {
     NSString *md5_str=@"";
 
-    md5_str=    [Common md5:[NSString stringWithFormat:@"%@%@",url,[dic JSONString]]];
+    md5_str = [Common md5:[NSString stringWithFormat:@"%@%@",url,[dic JSONString]]];
     
-    NSLog(@"%@",md5_str);
+    NSLog(@"本次请求的数据的md5%@",md5_str);
     return md5_str;
 }
 
@@ -52,7 +69,6 @@
              result[8], result[9], result[10], result[11],
              result[12], result[13], result[14], result[15]
              ] lowercaseString];
-    
 }
 
 +(BOOL)CheckIsTelNum:(NSString *)str
@@ -72,6 +88,13 @@
         return NO;
     }
     return YES;
+}
+
+
++(BOOL)isValidateEmail:(NSString *)email{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
 }
 
 +(BOOL)CheckIsIncludeNumAndWord:(NSString *)str
@@ -105,6 +128,11 @@
     
     return b_return;
     
+}
+
++ (BOOL)stringIsEmpty:(NSString *)string
+{
+    return (string==nil || [string isEqualToString:@""]);
 }
 
 +(void)SetNav:(UINavigationBar *)bar
@@ -160,17 +188,11 @@
     
     NSDate *destDate= [dateFormatter dateFromString:dateString];
     
-    
-    
-    
     NSTimeZone *zone = [NSTimeZone systemTimeZone];
     
     NSInteger interval = [zone secondsFromGMTForDate: destDate];
     
     NSDate *localeDate = [destDate  dateByAddingTimeInterval: interval];
-    
-    
-    
     
     return localeDate;
     
@@ -365,5 +387,178 @@
     return YES;
 }
 
- 
+
+#pragma mark - 根据字体大小多少计算尺寸
++ (CGRect)computeTextRectWith:(NSString *)text  andTextFont:(UIFont *)textFont andMaxWidth:(CGFloat)maxWidth
+{
+    //根据字数设置Text的尺寸
+    CGSize maxSize = CGSizeMake(maxWidth,CGFLOAT_MAX);
+    NSStringDrawingOptions opts = NSStringDrawingUsesLineFragmentOrigin |
+    NSStringDrawingUsesFontLeading;
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    [style setLineBreakMode:NSLineBreakByCharWrapping];
+    
+    NSDictionary *attributes = @{ NSFontAttributeName : textFont, NSParagraphStyleAttributeName : style };
+    CGRect rect;
+    if (![text isKindOfClass:[NSNull class]]) {
+        rect = [text boundingRectWithSize:maxSize
+                                  options:opts
+                               attributes:attributes
+                                  context:nil];
+    }
+    return rect;
+}
+
+#pragma mark - 校验身份证号
++ (BOOL)CheckIsIdentityCard: (NSString *)identityCard
+{
+    //判断是否为空
+    if (identityCard==nil||identityCard.length <= 0) {
+        return NO;
+    }
+    //判断是否是18位，末尾是否是x
+    NSString *regex2 = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
+    NSPredicate *identityCardPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex2];
+    if(![identityCardPredicate evaluateWithObject:identityCard]){
+        return NO;
+    }
+    //判断生日是否合法
+    NSRange range = NSMakeRange(6,8);
+    NSString *datestr = [identityCard substringWithRange:range];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat : @"yyyyMMdd"];
+    if([formatter dateFromString:datestr]==nil){
+        return NO;
+    }
+    
+    //判断校验位
+    if(identityCard.length==18)
+    {
+        NSArray *idCardWi= @[ @"7", @"9", @"10", @"5", @"8", @"4", @"2", @"1", @"6", @"3", @"7", @"9", @"10", @"5", @"8", @"4", @"2" ]; //将前17位加权因子保存在数组里
+        NSArray * idCardY=@[ @"1", @"0", @"10", @"9", @"8", @"7", @"6", @"5", @"4", @"3", @"2" ]; //这是除以11后，可能产生的11位余数、验证码，也保存成数组
+        int idCardWiSum=0; //用来保存前17位各自乖以加权因子后的总和
+        for(int i=0;i<17;i++){
+            idCardWiSum+=[[identityCard substringWithRange:NSMakeRange(i,1)] intValue]*[idCardWi[i] intValue];
+        }
+        
+        int idCardMod=idCardWiSum%11;//计算出校验码所在数组的位置
+        NSString *idCardLast=[identityCard substringWithRange:NSMakeRange(17,1)];//得到最后一位身份证号码
+        
+        //如果等于2，则说明校验码是10，身份证号码最后一位应该是X
+        if(idCardMod==2){
+            if([idCardLast isEqualToString:@"X"]||[idCardLast isEqualToString:@"x"]){
+                return YES;
+            }else{
+                return NO;
+            }
+        }else{
+            //用计算出的验证码与最后一位身份证号码匹配，如果一致，说明通过，否则是无效的身份证号码
+            if([idCardLast intValue]==[idCardY[idCardMod] intValue]){
+                return YES;
+            }else{
+                return NO;
+            }
+        }
+    }
+    return NO;
+}
+
+/*  判断用户输入的密码是否符合规范，符合规范的密码要求：
+1. 密码中必须同时包含数字和字母
+*/
++(BOOL)judgeSafeStringLegal:(NSString *)pass{
+    BOOL result = false;
+    if ([pass length] >= 6){
+        // 判断长度大于6位后再接着判断是否同时包含数字和字符
+        NSString * regex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$";
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        result = [pred evaluateWithObject:pass];
+    }
+    return result;
+}
+
++ (NSString *)intervalFromLastDate: (NSString *) dateString1  toTheDate:(NSString *) dateString2
+{
+    NSArray *timeArray1=[dateString1 componentsSeparatedByString:@"."];
+    dateString1=[timeArray1 objectAtIndex:0];
+    
+    
+    NSArray *timeArray2=[dateString2 componentsSeparatedByString:@"."];
+    dateString2=[timeArray2 objectAtIndex:0];
+    
+    NSLog(@"%@.....%@",dateString1,dateString2);
+    NSDateFormatter *date=[[NSDateFormatter alloc] init];
+    [date setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSDate *d1=[date dateFromString:dateString1];
+    
+    NSTimeInterval late1=[d1 timeIntervalSince1970]*1;
+    
+    NSDate *d2=[date dateFromString:dateString2];
+    
+    NSTimeInterval late2=[d2 timeIntervalSince1970]*1;
+    
+    NSTimeInterval cha=late2-late1;
+    NSString *timeString=@"";
+    NSString *house=@"";
+    NSString *min=@"";
+    NSString *sen=@"";
+    
+    sen = [NSString stringWithFormat:@"%d", (int)cha%60];
+    //        min = [min substringToIndex:min.length-7];
+    //    秒
+    sen=[NSString stringWithFormat:@"%@", sen];
+    
+    min = [NSString stringWithFormat:@"%d", (int)cha/60%60];
+    //        min = [min substringToIndex:min.length-7];
+    //    分
+    min=[NSString stringWithFormat:@"%@", min];
+    
+    
+    //    小时
+    house = [NSString stringWithFormat:@"%d", (int)cha/3600];
+    //        house = [house substringToIndex:house.length-7];
+    house=[NSString stringWithFormat:@"%@", house];
+
+    timeString = [NSString stringWithFormat:@"%d",house.intValue*60*60 + min.intValue*60 + sen.intValue];
+    
+    return timeString;
+}
+
+// 去掉首尾空格
++ (NSString *)handleCommentStrEnumerationWithStr:(NSString *)string
+{
+    NSMutableString * outputString = [NSMutableString stringWithString:string];
+    
+    __block NSInteger spaceNumber = 0;
+    
+    // 先解决字符串前端的空格
+    [outputString enumerateSubstringsInRange:NSMakeRange(0, outputString.length) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+        if (![substring isEqualToString:@" "]) {
+            * stop = YES;
+            return ;
+        }
+        
+        spaceNumber++;
+    }];
+    
+    [outputString deleteCharactersInRange:NSMakeRange(0, spaceNumber)];
+    
+    // 然后反向遍历，解决字符串后端的空格
+    spaceNumber = 0;
+    [outputString enumerateSubstringsInRange:NSMakeRange(0, outputString.length) options:NSStringEnumerationByComposedCharacterSequences|NSStringEnumerationReverse usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+        if (![substring isEqualToString:@" "]) {
+            * stop = YES;
+            return ;
+        }
+        
+        spaceNumber++;
+    }];
+    
+    [outputString deleteCharactersInRange:NSMakeRange(outputString.length - spaceNumber, spaceNumber)];
+    
+    return outputString;
+}
+
+
 @end

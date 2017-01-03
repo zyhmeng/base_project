@@ -9,7 +9,9 @@
 #import "MJRefreshBackGifFooter.h"
 
 @interface MJRefreshBackGifFooter()
-@property (weak, nonatomic) UIImageView *gifView;
+{
+    __unsafe_unretained UIImageView *_gifView;
+}
 /** 所有状态对应的动画图片 */
 @property (strong, nonatomic) NSMutableDictionary *stateImages;
 /** 所有状态对应的动画时间 */
@@ -79,12 +81,14 @@
 {
     [super placeSubviews];
     
+    if (self.gifView.constraints.count) return;
+    
     self.gifView.frame = self.bounds;
     if (self.stateLabel.hidden) {
         self.gifView.contentMode = UIViewContentModeCenter;
     } else {
         self.gifView.contentMode = UIViewContentModeRight;
-        self.gifView.mj_w = self.mj_w * 0.5 - 90;
+        self.gifView.mj_w = self.mj_w * 0.5 - 20 - self.stateLabel.mj_textWith * 0.5;
     }
 }
 

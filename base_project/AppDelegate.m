@@ -32,15 +32,14 @@
     
 
     //YFNetworking设置项目
-    
     [YFNetworking enableInterfaceDebug:YES];
     
     [YFNetworking configRequestType:YFRequestTypeJSON responseType:YFResponseTypeJSON shouldAutoEncodeUrl:NO callbackOnCancelRequest:YES];
     
     [YFNetworking cacheGetRequest:YES shoulCachePost:YES];
     
-    [YFNetworking updateBaseUrl:@"http://s3.xtox.net:8180/platform/api"];
-    
+    [YFNetworking updateBaseUrl:CommonURL];
+
 
     return YES;
     

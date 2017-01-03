@@ -9,7 +9,9 @@
 #import "MJRefreshGifHeader.h"
 
 @interface MJRefreshGifHeader()
-@property (weak, nonatomic) UIImageView *gifView;
+{
+    __unsafe_unretained UIImageView *_gifView;
+}
 /** 所有状态对应的动画图片 */
 @property (strong, nonatomic) NSMutableDictionary *stateImages;
 /** 所有状态对应的动画时间 */
@@ -21,8 +23,8 @@
 - (UIImageView *)gifView
 {
     if (!_gifView) { 
-        UIImageView *gifView = [[UIImageView alloc] init];
-        [self addSubview:_gifView = gifView];
+        UIImageView *gifView = [[UIImageView alloc] init]; 
+        [self addSubview:_gifView = gifView]; 
     } 
     return _gifView; 
 }
@@ -80,6 +82,9 @@
 - (void)placeSubviews
 {
     [super placeSubviews];
+    
+    if (self.gifView.constraints.count) return;
+    
     self.gifView.frame = self.bounds;
     if (self.stateLabel.hidden && self.lastUpdatedTimeLabel.hidden) {
         self.gifView.contentMode = UIViewContentModeCenter;
@@ -87,9 +92,6 @@
         self.gifView.contentMode = UIViewContentModeRight;
         self.gifView.mj_w = self.mj_w * 0.5 - 90;
     }
-    [self.gifView setFrame:CGRectMake(20, 20, 60, 60)];
-    self.gifView.contentMode=UIViewContentModeScaleAspectFit;
-    
 }
 
 - (void)setState:(MJRefreshState)state
@@ -109,6 +111,8 @@
             self.gifView.animationDuration = [self.stateDurations[@(state)] doubleValue];
             [self.gifView startAnimating];
         }
+    } else if (state == MJRefreshStateIdle) {
+        [self.gifView stopAnimating];
     }
 }
 @end

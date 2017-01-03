@@ -14,11 +14,21 @@
 #import <CommonCrypto/CommonCrypto.h>
 @interface Common : NSObject
 
+
+//解析返回的数据
++ (id)GetRequestResultFromResponse:(id)response;
+
+//解析返回错误码
++ (NSString *)GetErrorStrFromResponse:(id)response;
+
 //判断是否成功请求
 +(BOOL)IsRequestSuccess:(id)response_object;
 
 //获取请求提示消息
 +(NSString *)GetResponseMSG:(id)response_object;
+
+//获取请求提示消息码
++(NSNumber *)GetResponseCode:(id)response_object;
 
 //获取业务数据
 +(id)GetResponseData:(id)response_object ByKey:(NSString *)key;
@@ -29,10 +39,17 @@
 //判断手机号
 +(BOOL)CheckIsTelNum:(NSString *)str;
 
+//校验身份证号
++ (BOOL)CheckIsIdentityCard: (NSString *)identityCard;
+
+//判断email
++(BOOL)isValidateEmail:(NSString *)email;
+
 //判断密码
 +(BOOL)CheckIsIncludeNumAndWord:(NSString *)str;
 
-
+//判断密码的格式是否包含字母和数字
++(BOOL)judgeSafeStringLegal:(NSString *)pass;
 
 //设置NAV BAR
 +(void)SetNav:(UINavigationBar *)bar;
@@ -67,6 +84,18 @@
 //判断输入的密码项
 +(BOOL)CheckPWByOnce:(NSString *)OncePW TwicePW:(NSString *)TwicePW;
 
+//判断字符串是否为空
++ (BOOL)stringIsEmpty:(NSString *)string;
+
+//两个时间差
++ (NSString *)intervalFromLastDate: (NSString *) dateString1  toTheDate:(NSString *) dateString2;
+
+// 根据字体大小多少计算尺寸
++ (CGRect)computeTextRectWith:(NSString *)text  andTextFont:(UIFont *)textFont andMaxWidth:(CGFloat)maxWidth;
+
+
+// 去掉首尾空格
++ (NSString *)handleCommentStrEnumerationWithStr:(NSString *)string;
 @end
 
 

@@ -8,8 +8,14 @@
 
 #import "BPHomeViewController.h"
 #import "YFPhotoShowViewController.h"
+#import "UIActionSheet+Blocks.h"
+#import "RIButtonItem.h"
+#import "YFAPhotoChooseViewController.h"
+#import "YFHotSearchViewController.h"
+#import "YFPieChartViewController.h"
+#import "YFNewsViewController.h"
 
-@interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *MainFuncTableView;
 
@@ -97,7 +103,35 @@
         
         [self.navigationController pushViewController:photoShowVC animated:YES];
         
+    }else if (indexPath.section == 0 && indexPath.row == 1)
+    {
+       [[[UIActionSheet alloc] initWithTitle:nil cancelButtonItem:[RIButtonItem itemWithLabel:@"取消"] destructiveButtonItem:nil otherButtonItems:[RIButtonItem itemWithLabel:@"选择多张图片" action:^{
+            
+       }], [RIButtonItem itemWithLabel:@"选择一张图片" action:^{
+           
+           YFAPhotoChooseViewController *aPhotoVC = [[YFAPhotoChooseViewController alloc] init];
+           [self.navigationController pushViewController:aPhotoVC animated:YES];
+           
+       }], nil] showInView:self.view];
+        
+    }else if (indexPath.section == 0 && indexPath.row == 2)
+    {
+        YFHotSearchViewController *hotSearchVC = [[YFHotSearchViewController alloc] init];
+        
+        [self.navigationController pushViewController:hotSearchVC animated:YES];
+    }else if (indexPath.section == 0 && indexPath.row == 3)
+    {
+        YFPieChartViewController *pieChartVC = [[YFPieChartViewController alloc] init];
+        
+        [self.navigationController pushViewController:pieChartVC animated:YES];
+    }else if (indexPath.section == 0 && indexPath.row == 4)
+    {
+        YFNewsViewController *newsVC = [[YFNewsViewController alloc] init];
+        
+        [self.navigationController pushViewController:newsVC animated:YES];
     }
 }
+
+
 
 @end
