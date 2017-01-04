@@ -13,7 +13,6 @@
 		061305FE1E14FEF700625CB2 /* YFNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 061305F71E14FEF700625CB2 /* YFNewsTableViewCell.m */; };
 		061305FF1E14FEF700625CB2 /* YFNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061305F81E14FEF700625CB2 /* YFNewsTableViewCell.xib */; };
 		061306001E14FEF700625CB2 /* YHTitleSlideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061305FA1E14FEF700625CB2 /* YHTitleSlideScrollView.m */; };
-		064753461E0CB5520023156B /* YFMuchPhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064753451E0CB5520023156B /* YFMuchPhotoChooseViewController.m */; };
 		064753511E0CBF500023156B /* YFHotSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064753501E0CBF500023156B /* YFHotSearchViewController.m */; };
 		064753571E0CBFAA0023156B /* HistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 064753541E0CBFAA0023156B /* HistoryItem.m */; };
 		064753581E0CBFAA0023156B /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 064753561E0CBFAA0023156B /* HistoryView.m */; };
@@ -21,11 +20,16 @@
 		0647535F1E0D07FA0023156B /* YFPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647535E1E0D07FA0023156B /* YFPieChartViewController.m */; };
 		06714E9F1E0B6DDA00C174D5 /* ImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */; };
 		06714EA21E0B6E9F00C174D5 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EA11E0B6E9F00C174D5 /* PhotoView.m */; };
-		06714EA61E0B76AC00C174D5 /* YFAPhotoChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EA51E0B76AC00C174D5 /* YFAPhotoChoose.m */; };
-		06714EA91E0B847300C174D5 /* YFAPhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EA81E0B847300C174D5 /* YFAPhotoChooseViewController.m */; };
 		06714EB11E0B86A800C174D5 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EAC1E0B86A800C174D5 /* RIButtonItem.m */; };
 		06714EB21E0B86A800C174D5 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EAE1E0B86A800C174D5 /* UIActionSheet+Blocks.m */; };
 		06714EB31E0B86A800C174D5 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EB01E0B86A800C174D5 /* UIAlertView+Blocks.m */; };
+		068863DA1E1B90C4001B9904 /* common.css in Resources */ = {isa = PBXBuildFile; fileRef = 068863D51E1B90C4001B9904 /* common.css */; };
+		068863DB1E1B90C4001B9904 /* WebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863D71E1B90C4001B9904 /* WebViewModel.m */; };
+		068863DC1E1B90C4001B9904 /* YFRichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863D91E1B90C4001B9904 /* YFRichTextViewController.m */; };
+		068863DF1E1B945E001B9904 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863DE1E1B945E001B9904 /* UIView+Extension.m */; };
+		068863E91E1B9D1D001B9904 /* YFAPhotoChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863E31E1B9D1D001B9904 /* YFAPhotoChoose.m */; };
+		068863EA1E1B9D1D001B9904 /* YFAPhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863E51E1B9D1D001B9904 /* YFAPhotoChooseViewController.m */; };
+		068863EB1E1B9D1D001B9904 /* YFMuchPhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863E81E1B9D1D001B9904 /* YFMuchPhotoChooseViewController.m */; };
 		06945DE81E01244400DA82D9 /* YFPhotoShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06945DE71E01244400DA82D9 /* YFPhotoShowView.m */; };
 		06945DEB1E01247000DA82D9 /* YFPhotoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06945DEA1E01247000DA82D9 /* YFPhotoShowViewController.m */; };
 		06945DEF1E012C4600DA82D9 /* YFPhotoShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06945DED1E012C4600DA82D9 /* YFPhotoShowCell.m */; };
@@ -281,8 +285,6 @@
 		061305F81E14FEF700625CB2 /* YFNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFNewsTableViewCell.xib; sourceTree = "<group>"; };
 		061305F91E14FEF700625CB2 /* YHTitleSlideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTitleSlideScrollView.h; sourceTree = "<group>"; };
 		061305FA1E14FEF700625CB2 /* YHTitleSlideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTitleSlideScrollView.m; sourceTree = "<group>"; };
-		064753441E0CB5520023156B /* YFMuchPhotoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMuchPhotoChooseViewController.h; sourceTree = "<group>"; };
-		064753451E0CB5520023156B /* YFMuchPhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMuchPhotoChooseViewController.m; sourceTree = "<group>"; };
 		0647534F1E0CBF500023156B /* YFHotSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFHotSearchViewController.h; sourceTree = "<group>"; };
 		064753501E0CBF500023156B /* YFHotSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFHotSearchViewController.m; sourceTree = "<group>"; };
 		064753531E0CBFAA0023156B /* HistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryItem.h; sourceTree = "<group>"; };
@@ -297,16 +299,25 @@
 		06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserViewController.m; sourceTree = "<group>"; };
 		06714EA01E0B6E9F00C174D5 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
 		06714EA11E0B6E9F00C174D5 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
-		06714EA41E0B76AC00C174D5 /* YFAPhotoChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAPhotoChoose.h; sourceTree = "<group>"; };
-		06714EA51E0B76AC00C174D5 /* YFAPhotoChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAPhotoChoose.m; sourceTree = "<group>"; };
-		06714EA71E0B847300C174D5 /* YFAPhotoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAPhotoChooseViewController.h; sourceTree = "<group>"; };
-		06714EA81E0B847300C174D5 /* YFAPhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAPhotoChooseViewController.m; sourceTree = "<group>"; };
 		06714EAB1E0B86A800C174D5 /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
 		06714EAC1E0B86A800C174D5 /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
 		06714EAD1E0B86A800C174D5 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
 		06714EAE1E0B86A800C174D5 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
 		06714EAF1E0B86A800C174D5 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		06714EB01E0B86A800C174D5 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		068863D51E1B90C4001B9904 /* common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = common.css; sourceTree = "<group>"; };
+		068863D61E1B90C4001B9904 /* WebViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewModel.h; sourceTree = "<group>"; };
+		068863D71E1B90C4001B9904 /* WebViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewModel.m; sourceTree = "<group>"; };
+		068863D81E1B90C4001B9904 /* YFRichTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRichTextViewController.h; sourceTree = "<group>"; };
+		068863D91E1B90C4001B9904 /* YFRichTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRichTextViewController.m; sourceTree = "<group>"; };
+		068863DD1E1B945E001B9904 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		068863DE1E1B945E001B9904 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		068863E21E1B9D1D001B9904 /* YFAPhotoChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAPhotoChoose.h; sourceTree = "<group>"; };
+		068863E31E1B9D1D001B9904 /* YFAPhotoChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAPhotoChoose.m; sourceTree = "<group>"; };
+		068863E41E1B9D1D001B9904 /* YFAPhotoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAPhotoChooseViewController.h; sourceTree = "<group>"; };
+		068863E51E1B9D1D001B9904 /* YFAPhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAPhotoChooseViewController.m; sourceTree = "<group>"; };
+		068863E71E1B9D1D001B9904 /* YFMuchPhotoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMuchPhotoChooseViewController.h; sourceTree = "<group>"; };
+		068863E81E1B9D1D001B9904 /* YFMuchPhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMuchPhotoChooseViewController.m; sourceTree = "<group>"; };
 		06945DE61E01244400DA82D9 /* YFPhotoShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoShowView.h; sourceTree = "<group>"; };
 		06945DE71E01244400DA82D9 /* YFPhotoShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPhotoShowView.m; sourceTree = "<group>"; };
 		06945DE91E01247000DA82D9 /* YFPhotoShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoShowViewController.h; sourceTree = "<group>"; };
@@ -941,22 +952,10 @@
 		0647535C1E0D07D60023156B /* 饼状图 */ = {
 			isa = PBXGroup;
 			children = (
-				06F7974E1E10C1EF005C9376 /* 仿网易新闻首页 */,
 				0647535D1E0D07FA0023156B /* YFPieChartViewController.h */,
 				0647535E1E0D07FA0023156B /* YFPieChartViewController.m */,
 			);
 			path = "饼状图";
-			sourceTree = "<group>";
-		};
-		06714EA31E0B71B900C174D5 /* 单张照片的选择 */ = {
-			isa = PBXGroup;
-			children = (
-				06714EA71E0B847300C174D5 /* YFAPhotoChooseViewController.h */,
-				06714EA81E0B847300C174D5 /* YFAPhotoChooseViewController.m */,
-				06714EA41E0B76AC00C174D5 /* YFAPhotoChoose.h */,
-				06714EA51E0B76AC00C174D5 /* YFAPhotoChoose.m */,
-			);
-			path = "单张照片的选择";
 			sourceTree = "<group>";
 		};
 		06714EAA1E0B86A800C174D5 /* UIAlertView-Blocks */ = {
@@ -972,11 +971,43 @@
 			path = "UIAlertView-Blocks";
 			sourceTree = "<group>";
 		};
-		06714EB41E0BB90E00C174D5 /* 多张照片的选择 */ = {
+		068863D41E1B90C4001B9904 /* Html富文本处理 */ = {
 			isa = PBXGroup;
 			children = (
-				064753441E0CB5520023156B /* YFMuchPhotoChooseViewController.h */,
-				064753451E0CB5520023156B /* YFMuchPhotoChooseViewController.m */,
+				068863D81E1B90C4001B9904 /* YFRichTextViewController.h */,
+				068863D91E1B90C4001B9904 /* YFRichTextViewController.m */,
+				068863D61E1B90C4001B9904 /* WebViewModel.h */,
+				068863D71E1B90C4001B9904 /* WebViewModel.m */,
+				068863D51E1B90C4001B9904 /* common.css */,
+			);
+			path = "Html富文本处理";
+			sourceTree = "<group>";
+		};
+		068863E01E1B9D1D001B9904 /* 头像上传 */ = {
+			isa = PBXGroup;
+			children = (
+				068863E11E1B9D1D001B9904 /* 单张照片的选择 */,
+				068863E61E1B9D1D001B9904 /* 多张照片的选择 */,
+			);
+			path = "头像上传";
+			sourceTree = "<group>";
+		};
+		068863E11E1B9D1D001B9904 /* 单张照片的选择 */ = {
+			isa = PBXGroup;
+			children = (
+				068863E21E1B9D1D001B9904 /* YFAPhotoChoose.h */,
+				068863E31E1B9D1D001B9904 /* YFAPhotoChoose.m */,
+				068863E41E1B9D1D001B9904 /* YFAPhotoChooseViewController.h */,
+				068863E51E1B9D1D001B9904 /* YFAPhotoChooseViewController.m */,
+			);
+			path = "单张照片的选择";
+			sourceTree = "<group>";
+		};
+		068863E61E1B9D1D001B9904 /* 多张照片的选择 */ = {
+			isa = PBXGroup;
+			children = (
+				068863E71E1B9D1D001B9904 /* YFMuchPhotoChooseViewController.h */,
+				068863E81E1B9D1D001B9904 /* YFMuchPhotoChooseViewController.m */,
 			);
 			path = "多张照片的选择";
 			sourceTree = "<group>";
@@ -985,10 +1016,11 @@
 			isa = PBXGroup;
 			children = (
 				06945DE51E01228A00DA82D9 /* 九宫格图片显示 */,
-				069A966A1E078A1200EC5DE4 /* 选择照片与删除 */,
+				068863E01E1B9D1D001B9904 /* 头像上传 */,
 				0647534E1E0CBF2F0023156B /* 热门搜索文字排序 */,
 				0647535C1E0D07D60023156B /* 饼状图 */,
 				061305DB1E149C2200625CB2 /* 仿网易新闻首页 */,
+				068863D41E1B90C4001B9904 /* Html富文本处理 */,
 			);
 			path = "界面";
 			sourceTree = "<group>";
@@ -1011,22 +1043,6 @@
 				06714EA11E0B6E9F00C174D5 /* PhotoView.m */,
 			);
 			path = "九宫格图片显示";
-			sourceTree = "<group>";
-		};
-		069A966A1E078A1200EC5DE4 /* 选择照片与删除 */ = {
-			isa = PBXGroup;
-			children = (
-				06714EA31E0B71B900C174D5 /* 单张照片的选择 */,
-				06714EB41E0BB90E00C174D5 /* 多张照片的选择 */,
-			);
-			path = "选择照片与删除";
-			sourceTree = "<group>";
-		};
-		06F7974E1E10C1EF005C9376 /* 仿网易新闻首页 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "仿网易新闻首页";
 			sourceTree = "<group>";
 		};
 		84109FD11C101588004A0425 /* Pay */ = {
@@ -2002,6 +2018,8 @@
 				84EEAECE1BEC3CB600577612 /* UIImage+YF.m */,
 				8468C0BD1C8E7F3F00A192E4 /* NSDictionary+YF.h */,
 				8468C0BE1C8E7F3F00A192E4 /* NSDictionary+YF.m */,
+				068863DD1E1B945E001B9904 /* UIView+Extension.h */,
+				068863DE1E1B945E001B9904 /* UIView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2208,6 +2226,7 @@
 				84E394B21DA8CED800F520C1 /* WeiboSDK.bundle in Resources */,
 				8425E1AF1BFED0A20094DF28 /* box.png in Resources */,
 				84F8310C1BE71444002F36C5 /* Default-568h@2x.png in Resources */,
+				068863DA1E1B90C4001B9904 /* common.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2246,6 +2265,7 @@
 				84BD2CF61BE32131006E93A1 /* FMDatabase.m in Sources */,
 				84F7B9681CBE206E008381FE /* UIProgressView+AFNetworking.m in Sources */,
 				8431EE511C2546D600B8F7AB /* MJDictionaryCache.m in Sources */,
+				068863DF1E1B945E001B9904 /* UIView+Extension.m in Sources */,
 				8410A11E1C101F8C004A0425 /* APAuthV2Info.m in Sources */,
 				84BD2CFC1BE32131006E93A1 /* JSONKit.m in Sources */,
 				84BD2D3E1BE32131006E93A1 /* SDWebImageManager.m in Sources */,
@@ -2269,11 +2289,11 @@
 				8431EE551C2546D600B8F7AB /* MJPropertyKey.m in Sources */,
 				84BD2CF51BE32131006E93A1 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
 				84BD2CF81BE32131006E93A1 /* FMDatabasePool.m in Sources */,
+				068863EB1E1B9D1D001B9904 /* YFMuchPhotoChooseViewController.m in Sources */,
 				8410A1231C101F8C004A0425 /* DataVerifier.m in Sources */,
 				84F7B9611CBE206E008381FE /* AFURLSessionManager.m in Sources */,
 				8410A1221C101F8C004A0425 /* DataSigner.m in Sources */,
 				0647535F1E0D07FA0023156B /* YFPieChartViewController.m in Sources */,
-				064753461E0CB5520023156B /* YFMuchPhotoChooseViewController.m in Sources */,
 				8425E1A21BFECCE00094DF28 /* ARGeoCoordinate.m in Sources */,
 				84F7B9651CBE206E008381FE /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				84BD2D1C1BE32131006E93A1 /* MZTimerLabel.m in Sources */,
@@ -2327,6 +2347,7 @@
 				84BD2D111BE32131006E93A1 /* MJRefreshBackGifFooter.m in Sources */,
 				8438DAC61C0E8F9B00E1533C /* EasyTableViewTool.m in Sources */,
 				8425E1A01BFECCE00094DF28 /* ARKitEngine.m in Sources */,
+				068863E91E1B9D1D001B9904 /* YFAPhotoChoose.m in Sources */,
 				84BD2D291BE32131006E93A1 /* POPLayerExtras.mm in Sources */,
 				84F7B96D1CBE22C8008381FE /* YFNetworking.m in Sources */,
 				84BD2D281BE32131006E93A1 /* POPGeometry.mm in Sources */,
@@ -2351,7 +2372,6 @@
 				06714EB11E0B86A800C174D5 /* RIButtonItem.m in Sources */,
 				84BD2D151BE32131006E93A1 /* MJRefreshNormalHeader.m in Sources */,
 				84EEAECF1BEC3CB600577612 /* UIImage+YF.m in Sources */,
-				06714EA91E0B847300C174D5 /* YFAPhotoChooseViewController.m in Sources */,
 				84BD2CF21BE32131006E93A1 /* EGOCache.m in Sources */,
 				84E5D3511D9260D600893E4C /* BPHomeViewController.m in Sources */,
 				84BD2D0E1BE32131006E93A1 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -2363,7 +2383,7 @@
 				84F7B9601CBE206E008381FE /* AFURLResponseSerialization.m in Sources */,
 				8410A12B1C101FB3004A0425 /* AliOrder.m in Sources */,
 				84BD2D211BE32131006E93A1 /* POPAnimationRuntime.mm in Sources */,
-				06714EA61E0B76AC00C174D5 /* YFAPhotoChoose.m in Sources */,
+				068863DC1E1B90C4001B9904 /* YFRichTextViewController.m in Sources */,
 				8431EE591C2546D600B8F7AB /* NSObject+MJKeyValue.m in Sources */,
 				84BD2D141BE32131006E93A1 /* MJRefreshGifHeader.m in Sources */,
 				84BD2D2B1BE32131006E93A1 /* POPPropertyAnimation.mm in Sources */,
@@ -2401,6 +2421,8 @@
 				8410A1251C101F8C004A0425 /* NSDataEx.m in Sources */,
 				8431EE571C2546D600B8F7AB /* NSObject+MJClass.m in Sources */,
 				84BD2D1E1BE32131006E93A1 /* POPAnimation.mm in Sources */,
+				068863DB1E1B90C4001B9904 /* WebViewModel.m in Sources */,
+				068863EA1E1B9D1D001B9904 /* YFAPhotoChooseViewController.m in Sources */,
 				84BD2D0C1BE32131006E93A1 /* MJRefreshFooter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

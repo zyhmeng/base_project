@@ -40,7 +40,6 @@
     
     [YFNetworking updateBaseUrl:CommonURL];
 
-
     return YES;
     
 }

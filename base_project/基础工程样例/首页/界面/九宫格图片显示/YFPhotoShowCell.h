@@ -12,4 +12,6 @@
 @interface YFPhotoShowCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet YFPhotoShowView *photoView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end

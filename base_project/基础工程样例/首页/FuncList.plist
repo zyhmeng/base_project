@@ -17,7 +17,7 @@
 				<key>id</key>
 				<string>1_1</string>
 				<key>name</key>
-				<string>选择照片显示与删除</string>
+				<string>头像上传</string>
 			</dict>
 			<dict>
 				<key>id</key>
@@ -36,6 +36,12 @@
 				<string>1_5</string>
 				<key>name</key>
 				<string>仿网易新闻首页</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<string>1_6</string>
+				<key>name</key>
+				<string>富文本处理</string>
 			</dict>
 		</array>
 	</dict>

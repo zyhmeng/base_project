@@ -1,0 +1,30 @@
+
+/* -------- common -------- */
+
+html,body{
+font-family:Arial,'microsoft yahei',Verdana,Helvetica,sans-serif;
+-webkit-text-size-adjust:none;
+text-size-adjust:none;/*用于保证文字大小不随浏览器字体大小变化*/
+-webkit-touch-callout:none;
+touch-callout:none;/*系统默认菜单被禁用*/
+-webkit-font-smoothing:antialiased;
+font-smooting:antialiased;/*使页面上的字体抗锯齿，使用户字体看起来会更加清晰舒服*/
+background:#f8f8fa;
+padding:0px; margin:0px;
+}
+html{font-size:10px; }
+body{ padding:1.0rem; }
+
+
+.title{ font-size:2rem;}
+.time{ color:#999; line-height:3rem; border-bottom:1px solid #CCC; margin-bottom:1.0rem; font-size:1.2rem}
+.content{ line-height:22px; font-size:1.4rem;}
+.content img{ display:block; margin:12px auto; width:100%;}
+/*.digest {*/
+/*    text-align:left;*/
+/*    font-size:17px;*/
+/*    color:gray;*/
+/*    margin-top:7px;*/
+/*    margin-bottom:7px;*/
+/*    */
+/*}*/

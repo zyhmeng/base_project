@@ -14,6 +14,8 @@
 #import "YFHotSearchViewController.h"
 #import "YFPieChartViewController.h"
 #import "YFNewsViewController.h"
+#import "YFRichTextViewController.h"
+
 
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
@@ -105,6 +107,7 @@
         
     }else if (indexPath.section == 0 && indexPath.row == 1)
     {
+        /*
        [[[UIActionSheet alloc] initWithTitle:nil cancelButtonItem:[RIButtonItem itemWithLabel:@"取消"] destructiveButtonItem:nil otherButtonItems:[RIButtonItem itemWithLabel:@"选择多张图片" action:^{
             
        }], [RIButtonItem itemWithLabel:@"选择一张图片" action:^{
@@ -112,7 +115,10 @@
            YFAPhotoChooseViewController *aPhotoVC = [[YFAPhotoChooseViewController alloc] init];
            [self.navigationController pushViewController:aPhotoVC animated:YES];
            
-       }], nil] showInView:self.view];
+       }], nil] showInView:self.view];*/
+        
+        YFAPhotoChooseViewController *aPhotoVC = [[YFAPhotoChooseViewController alloc] init];
+        [self.navigationController pushViewController:aPhotoVC animated:YES];
         
     }else if (indexPath.section == 0 && indexPath.row == 2)
     {
@@ -129,6 +135,11 @@
         YFNewsViewController *newsVC = [[YFNewsViewController alloc] init];
         
         [self.navigationController pushViewController:newsVC animated:YES];
+    }else if (indexPath.section == 0 && indexPath.row == 5)
+    {
+        YFRichTextViewController *richTextVC = [[YFRichTextViewController alloc] init];
+        
+        [self.navigationController pushViewController:richTextVC animated:YES];
     }
 }
 
