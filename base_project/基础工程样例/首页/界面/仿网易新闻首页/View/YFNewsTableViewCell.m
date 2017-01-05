@@ -43,7 +43,7 @@
     self.titleLabel.text = newsModel.title;
     self.subTitleLabel.text = newsModel.desc;
     
-    //截取时间
+    // 截取时间
     NSString *dateStr = [newsModel.addTime substringFromIndex:5];
     NSArray *dateArray = [dateStr componentsSeparatedByString:@"."];
     dateStr = [dateArray componentsJoinedByString:@"-"];

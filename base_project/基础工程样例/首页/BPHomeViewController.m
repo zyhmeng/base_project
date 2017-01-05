@@ -15,7 +15,8 @@
 #import "YFPieChartViewController.h"
 #import "YFNewsViewController.h"
 #import "YFRichTextViewController.h"
-
+#import "YFUIKitViewController.h"
+#import "YFUIKitAnimationViewController.h"
 
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
@@ -118,6 +119,7 @@
        }], nil] showInView:self.view];*/
         
         YFAPhotoChooseViewController *aPhotoVC = [[YFAPhotoChooseViewController alloc] init];
+        
         [self.navigationController pushViewController:aPhotoVC animated:YES];
         
     }else if (indexPath.section == 0 && indexPath.row == 2)
@@ -125,21 +127,35 @@
         YFHotSearchViewController *hotSearchVC = [[YFHotSearchViewController alloc] init];
         
         [self.navigationController pushViewController:hotSearchVC animated:YES];
+        
     }else if (indexPath.section == 0 && indexPath.row == 3)
     {
         YFPieChartViewController *pieChartVC = [[YFPieChartViewController alloc] init];
         
         [self.navigationController pushViewController:pieChartVC animated:YES];
+        
     }else if (indexPath.section == 0 && indexPath.row == 4)
     {
         YFNewsViewController *newsVC = [[YFNewsViewController alloc] init];
         
         [self.navigationController pushViewController:newsVC animated:YES];
+        
     }else if (indexPath.section == 0 && indexPath.row == 5)
     {
         YFRichTextViewController *richTextVC = [[YFRichTextViewController alloc] init];
         
         [self.navigationController pushViewController:richTextVC animated:YES];
+        
+    }else if (indexPath.section == 0 && indexPath.row == 6)
+    {
+        YFUIKitViewController *uikitVC = [[YFUIKitViewController alloc] init];
+        
+        [self.navigationController pushViewController:uikitVC animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row == 0)
+    {
+        YFUIKitAnimationViewController *uikitAnimationVC = [[YFUIKitAnimationViewController alloc] init];
+        
+        [self.navigationController pushViewController:uikitAnimationVC animated:YES];
     }
 }
 

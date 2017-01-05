@@ -95,6 +95,7 @@
 #import "YHRefreshNormalHeader.h"
 #import "YHRefreshBackNormalFooter.h"
 #import "UIView+Extension.h"
+#import "YFTextField.h"
 
 //全局变量
 //extern UserModel *g_user_model;//用户信息

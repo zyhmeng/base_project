@@ -43,6 +43,12 @@
 				<key>name</key>
 				<string>富文本处理</string>
 			</dict>
+			<dict>
+				<key>id</key>
+				<string>1_7</string>
+				<key>name</key>
+				<string>UIKit</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
@@ -55,7 +61,14 @@
 		<key>desc</key>
 		<string>动效</string>
 		<key>list</key>
-		<array/>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>3_1</string>
+				<key>name</key>
+				<string>UIKit动效</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>desc</key>

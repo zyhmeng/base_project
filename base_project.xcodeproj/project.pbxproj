@@ -23,6 +23,9 @@
 		06714EB11E0B86A800C174D5 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EAC1E0B86A800C174D5 /* RIButtonItem.m */; };
 		06714EB21E0B86A800C174D5 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EAE1E0B86A800C174D5 /* UIActionSheet+Blocks.m */; };
 		06714EB31E0B86A800C174D5 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EB01E0B86A800C174D5 /* UIAlertView+Blocks.m */; };
+		06727C511E1CC614007F1248 /* YFUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06727C4F1E1CC614007F1248 /* YFUIKitViewController.m */; };
+		06727C521E1CC614007F1248 /* YFUIKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06727C501E1CC614007F1248 /* YFUIKitViewController.xib */; };
+		06727C551E1CC6CC007F1248 /* YFUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06727C541E1CC6CC007F1248 /* YFUIButton.m */; };
 		068863DA1E1B90C4001B9904 /* common.css in Resources */ = {isa = PBXBuildFile; fileRef = 068863D51E1B90C4001B9904 /* common.css */; };
 		068863DB1E1B90C4001B9904 /* WebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863D71E1B90C4001B9904 /* WebViewModel.m */; };
 		068863DC1E1B90C4001B9904 /* YFRichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863D91E1B90C4001B9904 /* YFRichTextViewController.m */; };
@@ -36,6 +39,9 @@
 		06945DF01E012C4600DA82D9 /* YFPhotoShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06945DEE1E012C4600DA82D9 /* YFPhotoShowCell.xib */; };
 		06B357581E163C470053B55C /* YHRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B357551E163C470053B55C /* YHRefreshBackNormalFooter.m */; };
 		06B357591E163C470053B55C /* YHRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B357571E163C470053B55C /* YHRefreshNormalHeader.m */; };
+		06CAE6D51E1CF97400F6B318 /* YFUIKitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CAE6D31E1CF97400F6B318 /* YFUIKitAnimationViewController.m */; };
+		06CAE6D61E1CF97400F6B318 /* YFUIKitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CAE6D41E1CF97400F6B318 /* YFUIKitAnimationViewController.xib */; };
+		06CAE6D91E1CF9B200F6B318 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CAE6D81E1CF9B200F6B318 /* UIColor+CustomColors.m */; };
 		06FF81F81E0A1374001FA713 /* YFPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF81F71E0A1374001FA713 /* YFPhotoModel.m */; };
 		840A03CF1D92732A00BBDA8A /* UINavigationController+PUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A03CE1D92732A00BBDA8A /* UINavigationController+PUSH.m */; };
 		8410A11C1C101F8C004A0425 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8410A0B81C101F8C004A0425 /* AlipaySDK.bundle */; };
@@ -305,6 +311,11 @@
 		06714EAE1E0B86A800C174D5 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
 		06714EAF1E0B86A800C174D5 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		06714EB01E0B86A800C174D5 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		06727C4E1E1CC614007F1248 /* YFUIKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUIKitViewController.h; sourceTree = "<group>"; };
+		06727C4F1E1CC614007F1248 /* YFUIKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUIKitViewController.m; sourceTree = "<group>"; };
+		06727C501E1CC614007F1248 /* YFUIKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFUIKitViewController.xib; sourceTree = "<group>"; };
+		06727C531E1CC6CC007F1248 /* YFUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUIButton.h; sourceTree = "<group>"; };
+		06727C541E1CC6CC007F1248 /* YFUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUIButton.m; sourceTree = "<group>"; };
 		068863D51E1B90C4001B9904 /* common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = common.css; sourceTree = "<group>"; };
 		068863D61E1B90C4001B9904 /* WebViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewModel.h; sourceTree = "<group>"; };
 		068863D71E1B90C4001B9904 /* WebViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewModel.m; sourceTree = "<group>"; };
@@ -329,6 +340,11 @@
 		06B357551E163C470053B55C /* YHRefreshBackNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHRefreshBackNormalFooter.m; sourceTree = "<group>"; };
 		06B357561E163C470053B55C /* YHRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHRefreshNormalHeader.h; sourceTree = "<group>"; };
 		06B357571E163C470053B55C /* YHRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHRefreshNormalHeader.m; sourceTree = "<group>"; };
+		06CAE6D21E1CF97400F6B318 /* YFUIKitAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUIKitAnimationViewController.h; sourceTree = "<group>"; };
+		06CAE6D31E1CF97400F6B318 /* YFUIKitAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUIKitAnimationViewController.m; sourceTree = "<group>"; };
+		06CAE6D41E1CF97400F6B318 /* YFUIKitAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFUIKitAnimationViewController.xib; sourceTree = "<group>"; };
+		06CAE6D71E1CF9B200F6B318 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		06CAE6D81E1CF9B200F6B318 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		06FF81F61E0A1374001FA713 /* YFPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoModel.h; sourceTree = "<group>"; };
 		06FF81F71E0A1374001FA713 /* YFPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPhotoModel.m; sourceTree = "<group>"; };
 		840A03CD1D92732A00BBDA8A /* UINavigationController+PUSH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PUSH.h"; sourceTree = "<group>"; };
@@ -971,6 +987,16 @@
 			path = "UIAlertView-Blocks";
 			sourceTree = "<group>";
 		};
+		06727C4D1E1CC5F9007F1248 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				06727C4E1E1CC614007F1248 /* YFUIKitViewController.h */,
+				06727C4F1E1CC614007F1248 /* YFUIKitViewController.m */,
+				06727C501E1CC614007F1248 /* YFUIKitViewController.xib */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		068863D41E1B90C4001B9904 /* Html富文本处理 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1021,6 +1047,7 @@
 				0647535C1E0D07D60023156B /* 饼状图 */,
 				061305DB1E149C2200625CB2 /* 仿网易新闻首页 */,
 				068863D41E1B90C4001B9904 /* Html富文本处理 */,
+				06727C4D1E1CC5F9007F1248 /* UIKit */,
 			);
 			path = "界面";
 			sourceTree = "<group>";
@@ -1043,6 +1070,24 @@
 				06714EA11E0B6E9F00C174D5 /* PhotoView.m */,
 			);
 			path = "九宫格图片显示";
+			sourceTree = "<group>";
+		};
+		06CAE6D01E1CF90900F6B318 /* 动效 */ = {
+			isa = PBXGroup;
+			children = (
+				06CAE6D11E1CF94400F6B318 /* UIKit动效 */,
+			);
+			path = "动效";
+			sourceTree = "<group>";
+		};
+		06CAE6D11E1CF94400F6B318 /* UIKit动效 */ = {
+			isa = PBXGroup;
+			children = (
+				06CAE6D21E1CF97400F6B318 /* YFUIKitAnimationViewController.h */,
+				06CAE6D31E1CF97400F6B318 /* YFUIKitAnimationViewController.m */,
+				06CAE6D41E1CF97400F6B318 /* YFUIKitAnimationViewController.xib */,
+			);
+			path = "UIKit动效";
 			sourceTree = "<group>";
 		};
 		84109FD11C101588004A0425 /* Pay */ = {
@@ -1466,6 +1511,7 @@
 				840A03CE1D92732A00BBDA8A /* UINavigationController+PUSH.m */,
 				84E394C51DA8DBE700F520C1 /* FuncList.plist */,
 				06945DE41E01226B00DA82D9 /* 界面 */,
+				06CAE6D01E1CF90900F6B318 /* 动效 */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -1864,6 +1910,8 @@
 				84F7B96C1CBE22C8008381FE /* YFNetworking.m */,
 				84BD2DAB1BE360E5006E93A1 /* POPTool.h */,
 				84BD2DAC1BE360E5006E93A1 /* POPTool.m */,
+				06727C531E1CC6CC007F1248 /* YFUIButton.h */,
+				06727C541E1CC6CC007F1248 /* YFUIButton.m */,
 				8431EE101C252B6300B8F7AB /* YFTextField.h */,
 				8431EE111C252B6300B8F7AB /* YFTextField.m */,
 				8438DAC41C0E8F9B00E1533C /* EasyTableViewTool.h */,
@@ -2020,6 +2068,8 @@
 				8468C0BE1C8E7F3F00A192E4 /* NSDictionary+YF.m */,
 				068863DD1E1B945E001B9904 /* UIView+Extension.h */,
 				068863DE1E1B945E001B9904 /* UIView+Extension.m */,
+				06CAE6D71E1CF9B200F6B318 /* UIColor+CustomColors.h */,
+				06CAE6D81E1CF9B200F6B318 /* UIColor+CustomColors.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2195,6 +2245,7 @@
 			files = (
 				84E394AF1DA8CED800F520C1 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				84BD2BDC1BE30CC7006E93A1 /* BP_HomePageViewController.xib in Resources */,
+				06727C521E1CC614007F1248 /* YFUIKitViewController.xib in Resources */,
 				84BD2BB21BE30B5D006E93A1 /* LaunchScreen.storyboard in Resources */,
 				84BD2BAF1BE30B5D006E93A1 /* Assets.xcassets in Resources */,
 				8438DADF1C0EC1EA00E1533C /* mapapi.bundle in Resources */,
@@ -2207,6 +2258,7 @@
 				84E394B61DA8CED800F520C1 /* README.txt in Resources */,
 				84324D651BF9B9F700D10FA2 /* CollectionReusableView.xib in Resources */,
 				8425E1B71BFED14A0094DF28 /* ar_arrow.png in Resources */,
+				06CAE6D61E1CF97400F6B318 /* YFUIKitAnimationViewController.xib in Resources */,
 				06945DF01E012C4600DA82D9 /* YFPhotoShowCell.xib in Resources */,
 				8410A11C1C101F8C004A0425 /* AlipaySDK.bundle in Resources */,
 				843BC5C91C83EE2700C0BEDE /* 5.jpg in Resources */,
@@ -2337,13 +2389,16 @@
 				8425E1A41BFECCE00094DF28 /* RadarView.m in Sources */,
 				8431EE5A1C2546D600B8F7AB /* NSObject+MJProperty.m in Sources */,
 				84BD2D2E1BE32131006E93A1 /* TransformationMatrix.mm in Sources */,
+				06727C551E1CC6CC007F1248 /* YFUIButton.m in Sources */,
 				84A064B61C168D5B005132AB /* WXUtil.mm in Sources */,
 				84BD2D1B1BE32131006E93A1 /* UIView+MJExtension.m in Sources */,
 				84BD2D2A1BE32131006E93A1 /* POPMath.mm in Sources */,
+				06CAE6D91E1CF9B200F6B318 /* UIColor+CustomColors.m in Sources */,
 				84BD2D351BE32131006E93A1 /* SDCycleScrollView.m in Sources */,
 				84BD2CF41BE32131006E93A1 /* FMTokenizers.m in Sources */,
 				84BD2D251BE32131006E93A1 /* POPCGUtils.mm in Sources */,
 				84BD2CF71BE32131006E93A1 /* FMDatabaseAdditions.m in Sources */,
+				06CAE6D51E1CF97400F6B318 /* YFUIKitAnimationViewController.m in Sources */,
 				84BD2D111BE32131006E93A1 /* MJRefreshBackGifFooter.m in Sources */,
 				8438DAC61C0E8F9B00E1533C /* EasyTableViewTool.m in Sources */,
 				8425E1A01BFECCE00094DF28 /* ARKitEngine.m in Sources */,
@@ -2373,6 +2428,7 @@
 				84BD2D151BE32131006E93A1 /* MJRefreshNormalHeader.m in Sources */,
 				84EEAECF1BEC3CB600577612 /* UIImage+YF.m in Sources */,
 				84BD2CF21BE32131006E93A1 /* EGOCache.m in Sources */,
+				06727C511E1CC614007F1248 /* YFUIKitViewController.m in Sources */,
 				84E5D3511D9260D600893E4C /* BPHomeViewController.m in Sources */,
 				84BD2D0E1BE32131006E93A1 /* MJRefreshAutoGifFooter.m in Sources */,
 				84F7B9641CBE206E008381FE /* AFNetworkActivityIndicatorManager.m in Sources */,

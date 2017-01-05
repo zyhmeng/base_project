@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YFUIKitAnimationViewController">
+            <connections>
+                <outlet property="loginBtn" destination="85j-Kh-oai" id="Apo-WI-Rel"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85j-Kh-oai">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="BcR-ln-Ekv"/>
+                        <constraint firstAttribute="width" constant="100" id="aKE-QC-U2N"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGN-0h-TB3">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="V30-tW-xXk"/>
+                        <constraint firstAttribute="height" constant="50" id="yrp-IO-02n"/>
+                    </constraints>
+                    <state key="normal" image="circle_info_like_pre"/>
+                    <connections>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="a2D-3t-iFi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hGN-0h-TB3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6R1-Ug-aDq"/>
+                <constraint firstItem="85j-Kh-oai" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9hg-G3-71w"/>
+                <constraint firstItem="85j-Kh-oai" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="120" id="J2g-RJ-Mjk"/>
+                <constraint firstItem="hGN-0h-TB3" firstAttribute="top" secondItem="85j-Kh-oai" secondAttribute="bottom" constant="50" id="OvB-sl-b7f"/>
+            </constraints>
+            <point key="canvasLocation" x="66" y="-409"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="circle_info_like_pre" width="24" height="24"/>
+    </resources>
+</document>

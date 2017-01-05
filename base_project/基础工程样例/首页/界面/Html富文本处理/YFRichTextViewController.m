@@ -12,6 +12,8 @@
 @interface YFRichTextViewController ()<UIWebViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UIWebView *webView;
+@property (nonatomic, strong) UITableView *tableView;
+
 @end
 
 @implementation YFRichTextViewController
@@ -20,7 +22,7 @@
 {
     if (!_webView) {
         
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, UISCREENWIDTH, 300)];
+        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, UISCREENWIDTH, 1)];
     }
     
     return _webView;
@@ -54,16 +56,27 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     
-    tableView.tableHeaderView = self.webView;
     tableView.tableFooterView = [UIView new];
     tableView.rowHeight = 60;
     
+    self.tableView = tableView;
     [self.view addSubview:tableView];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     self.webView.yh_height = webView.scrollView.contentSize.height;
+    [self.tableView reloadData];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return self.webView.yh_height;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return self.webView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

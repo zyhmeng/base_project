@@ -8,61 +8,84 @@
 
 /*  CustomTextfield
  *
- *  可以满足Textfield下面带下划线，和leftView为文字或者图片的情况
+ *  提供了四种形式的textField，原生没有边框和圆角的，带下划线和自定义边框圆角的，可以通过枚举选择边框类型，可以设置边框的颜色和宽度
  *
- *  只需要调用setup的三个方法，设置需要的图片，文字和下划线即可
+ *  可以设置文字或者图片，显示在textField左边
  *
- *  Textfield的其他用到的属性都设置了默认值，如需要特殊更改可自行重写该属性的set方法
+ *  可以设置placeholder的字体的大小和颜色
  */
+
+typedef enum {
+    
+    YFTextFieldBorderStyleNone,
+    YFTextFieldBorderStyleUnderLine,
+    YFTextFieldBorderStyleCustomRoundedRect,
+    YFTextFieldBorderStyleSystemRoundedRect
+    
+}YFTextFieldBorderStyle;
+
+typedef enum {
+    
+    YFTextAlignmentRight,
+    YFTextAlignmentLeft,
+    
+}YFTextAlignmentType;
+
 #import <UIKit/UIKit.h>
 
 
 @interface YFTextField : UITextField
 
-//DefaulColor lightGrayColor
-@property (nonatomic, strong) UIColor *leftTextFontColor;
-@property (nonatomic, strong) UIColor *inputTextFontColor;
-@property (nonatomic, strong) UIColor *fineLineColor;
-
-//DefaulttextFieldLeftViewImageWH 21
-@property (nonatomic, assign) CGFloat textFieldLeftViewImageWH;
-
-//DefaultLeftTextFont   14
-@property (nonatomic)  int  leftTextFont;
-
-//DefaultTextFieldHight 30
-@property (nonatomic)  int  textFieldHight;
-
 
 /**
- * TextField  leftViewWithImage
+ *  enum select TextField Border style
  *
- * @param leftImage  leftView的放入的图片
- *
- * @param spacing    leftView和textfield输入框的距离
- *
- * @param fineLine   BOOL值决定是否需要下划线
+ *  @param style textField border style
  */
-- (void)setupTextFieldWithLeftViewImage:(UIImage *)leftImage textViewLeftViewSpacing:(CGFloat)spacing andFineLine:(BOOL)fineLine;
-
+- (void)setYFTextFieldBorderStyle:(YFTextFieldBorderStyle)style;
+/**
+ *  textField  imagrLeftView
+ *
+ *  @param leftImage leftView image
+ *  @param spacing   leftView and input spacing
+ *  @param imageWH   image width and height
+ */
+- (void)setYFTextFieldWithLeftViewImage:(UIImage *)leftImage spacing:(CGFloat)spacing imageWH:(CGSize)imageWH;
 
 /**
- * TextField  leftViewWithText
+ *  textField textLeftView
  *
- * @param leftViewText  leftView的放入的文字
- *
- * @param spacing       leftView和textfield输入框的距离
- *
- * @param fineLine      BOOL值决定是否需要下划线
+ *  @param leftViewText leftView text
+ *  @param spacing      leftView and input spacing
+ *  @param textFont     leftViewTextFont
+ *  @param textColor    leftViewTextColor
  */
-- (void)setupTextFieldWithLeftViewText:(NSString *)leftViewText textViewLeftViewSpacing:(CGFloat)spacing andFineLine:(BOOL)fineLine;
-
+- (void)setYFTextFieldWithLeftViewText:(NSString *)leftViewText spacing:(CGFloat)spacing textFont:(UIFont *)textFont andTextColor:(UIColor *)textColor;
 
 /**
- * TextField  no leftView
+ *  textField border lineColor and lineWidth
  *
- * @param fineLine      BOOL值决定是否需要下划线
+ *  @param color line color
+ *  @param width line width
  */
-- (void)setupTextFieldWithFineLine:(BOOL)fineLine;
+- (void)setYFTextFieldWithBorderLineColor:(UIColor *)color andWidth:(CGFloat)width;
+/**
+ *  textField border corner radius
+ *
+ *  @param radius corner radius
+ */
+- (void)setYFTextFieldWithBorderCornerRadius:(CGFloat)radius;
+
+/**
+ *  textField placeholder text
+ *
+ *  @param placeholderText placeholder text
+ *  @param font            text font
+ *  @param color           text color
+ */
+//- (void)setYFTextFieldWithPlaceholderText:(NSString *)placeholderText textFont:(UIFont *)font andTextColor:(UIColor *)color;
+
+//placeholder right alignment
+- (void)setYFTextFieldWithPlaceholderText:(NSString *)placeholderText alignment:(YFTextAlignmentType)type textFont:(UIFont *)font andTextColor:(UIColor *)color;
 
 @end
