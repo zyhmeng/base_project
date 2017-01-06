@@ -26,6 +26,7 @@
 		06727C511E1CC614007F1248 /* YFUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06727C4F1E1CC614007F1248 /* YFUIKitViewController.m */; };
 		06727C521E1CC614007F1248 /* YFUIKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06727C501E1CC614007F1248 /* YFUIKitViewController.xib */; };
 		06727C551E1CC6CC007F1248 /* YFUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06727C541E1CC6CC007F1248 /* YFUIButton.m */; };
+		067E45CC1E1E2C81005C0591 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 067E45CB1E1E2C81005C0591 /* SQLiteManager.m */; };
 		068863DA1E1B90C4001B9904 /* common.css in Resources */ = {isa = PBXBuildFile; fileRef = 068863D51E1B90C4001B9904 /* common.css */; };
 		068863DB1E1B90C4001B9904 /* WebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863D71E1B90C4001B9904 /* WebViewModel.m */; };
 		068863DC1E1B90C4001B9904 /* YFRichTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068863D91E1B90C4001B9904 /* YFRichTextViewController.m */; };
@@ -316,6 +317,8 @@
 		06727C501E1CC614007F1248 /* YFUIKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFUIKitViewController.xib; sourceTree = "<group>"; };
 		06727C531E1CC6CC007F1248 /* YFUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUIButton.h; sourceTree = "<group>"; };
 		06727C541E1CC6CC007F1248 /* YFUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUIButton.m; sourceTree = "<group>"; };
+		067E45CA1E1E2C81005C0591 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		067E45CB1E1E2C81005C0591 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
 		068863D51E1B90C4001B9904 /* common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = common.css; sourceTree = "<group>"; };
 		068863D61E1B90C4001B9904 /* WebViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewModel.h; sourceTree = "<group>"; };
 		068863D71E1B90C4001B9904 /* WebViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewModel.m; sourceTree = "<group>"; };
@@ -997,6 +1000,23 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		067E45C81E1E2C2A005C0591 /* 数据 */ = {
+			isa = PBXGroup;
+			children = (
+				067E45C91E1E2C49005C0591 /* 数据库存储 */,
+			);
+			path = "数据";
+			sourceTree = "<group>";
+		};
+		067E45C91E1E2C49005C0591 /* 数据库存储 */ = {
+			isa = PBXGroup;
+			children = (
+				067E45CA1E1E2C81005C0591 /* SQLiteManager.h */,
+				067E45CB1E1E2C81005C0591 /* SQLiteManager.m */,
+			);
+			path = "数据库存储";
+			sourceTree = "<group>";
+		};
 		068863D41E1B90C4001B9904 /* Html富文本处理 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1511,6 +1531,7 @@
 				840A03CE1D92732A00BBDA8A /* UINavigationController+PUSH.m */,
 				84E394C51DA8DBE700F520C1 /* FuncList.plist */,
 				06945DE41E01226B00DA82D9 /* 界面 */,
+				067E45C81E1E2C2A005C0591 /* 数据 */,
 				06CAE6D01E1CF90900F6B318 /* 动效 */,
 			);
 			path = "首页";
@@ -2440,6 +2461,7 @@
 				8410A12B1C101FB3004A0425 /* AliOrder.m in Sources */,
 				84BD2D211BE32131006E93A1 /* POPAnimationRuntime.mm in Sources */,
 				068863DC1E1B90C4001B9904 /* YFRichTextViewController.m in Sources */,
+				067E45CC1E1E2C81005C0591 /* SQLiteManager.m in Sources */,
 				8431EE591C2546D600B8F7AB /* NSObject+MJKeyValue.m in Sources */,
 				84BD2D141BE32131006E93A1 /* MJRefreshGifHeader.m in Sources */,
 				84BD2D2B1BE32131006E93A1 /* POPPropertyAnimation.mm in Sources */,

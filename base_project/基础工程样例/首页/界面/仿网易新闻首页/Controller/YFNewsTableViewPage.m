@@ -9,6 +9,7 @@
 #import "YFNewsTableViewPage.h"
 #import "YFNewsTableViewCell.h"
 #import "SDCycleScrollView.h"
+#import "SQLiteManager.h"
 
 @interface YFNewsTableViewPage ()
 
@@ -24,15 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.tableView.backgroundColor = [UIColor clearColor];
     
     self.dataList = [NSMutableArray array];
     self.bannerArray = [NSMutableArray array];
     
     [self setupRefresh];
-    
-    [self requestDataList];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YFNewsTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"YFNewsTableViewCell"];
     
@@ -46,7 +45,75 @@
     
     [self setupBanner];
     
+    // 创建数据库表
+    [[SQLiteManager shareIntance] createTable:newsListTable];
+    
+    // 监听网络状态
+    [self networkingStatus];
+  
 }
+
+- (void)networkingStatus
+{
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        if (status == AFNetworkReachabilityStatusNotReachable) {
+            
+            NSArray *array = [[SQLiteManager shareIntance] quertyNewsListWithCatId:self.catId];
+            
+            // 处理数据
+            [self handleDataWithModelList:array];
+            
+            [self shuaxinBanner];
+            [self.tableView reloadData];
+        }else
+        {
+            // 先清空数据库
+            [[SQLiteManager shareIntance]eraseNewsTableWithCatId:self.catId];
+            
+            // 请求健康质询type数据
+            [self requestDataList];
+        }
+    }];
+    
+    [manager startMonitoring];
+}
+
+// 处理数据
+- (void)handleDataWithModelList:(NSArray *)array
+{
+    [_bannerArray removeAllObjects];
+    [_dataList removeAllObjects];
+    
+    if ([self.catId isEqualToString:@"1"]) {
+        
+        for (YFNewsModel *model in array) {
+            
+            if ([model.isTop isEqualToString:@"Y"]) {
+                
+                [_bannerArray addObject:model];
+            }else
+            {
+                [_dataList addObject:model];
+            }
+        }
+    }else
+    {
+        if (array.count >= 3) {
+            
+            _bannerArray = [[array subarrayWithRange:NSMakeRange(0, 3)] mutableCopy];
+            
+            _dataList = [[array subarrayWithRange:NSMakeRange(3, array.count-3)] mutableCopy];
+            
+        }else
+        {
+           _bannerArray = [[array subarrayWithRange:NSMakeRange(0, array.count)] mutableCopy];
+        }
+    }
+}
+
 
 - (void)setupBanner
 {
@@ -122,8 +189,10 @@
                     YFNewsModel *model = [YFNewsModel mj_objectWithKeyValues:dict];
                     
                     [self.dataList addObject:model];
+                    
+                    // 存入数据库
+                    [[SQLiteManager shareIntance] insertNewsListWithCatId:self.catId model:model];
                 }
-
             }
         }
         
@@ -159,9 +228,9 @@
             [imgViewArray addObject:[CommonImageUrl stringByAppendingString:bannerModel.imgUrl]];
             
         }
+        
         self.bannerView.imageURLStringsGroup = imgViewArray;
         self.bannerView.titlesGroup = titleArray;
-        
     }
 }
 
@@ -189,10 +258,16 @@
                 if ([model.isTop isEqualToString:@"Y"]) {
                     
                     [self.bannerArray addObject:model];
+                    
+                    // 存入数据库
+                    [[SQLiteManager shareIntance] insertNewsListWithCatId:self.catId model:model];
                 }
                 else
                 {
                     [self.dataList addObject:model];
+                    
+                    // 存入数据库
+                    [[SQLiteManager shareIntance] insertNewsListWithCatId:self.catId model:model];
                 }
             }
             return;
@@ -206,6 +281,9 @@
             
             YFNewsModel *model = [YFNewsModel mj_objectWithKeyValues:dict];
             [self.bannerArray addObject:model];
+            
+            // 存入数据库
+            [[SQLiteManager shareIntance] insertNewsListWithCatId:self.catId model:model];
         }
         
         NSArray *infoArray = [array subarrayWithRange:NSMakeRange(3, array.count-3)];
@@ -214,6 +292,9 @@
             YFNewsModel *model = [YFNewsModel mj_objectWithKeyValues:dict];
             
             [self.dataList addObject:model];
+            
+            // 存入数据库
+            [[SQLiteManager shareIntance] insertNewsListWithCatId:self.catId model:model];
         }
     }
     //如果数据小于3条
@@ -225,6 +306,9 @@
             
             YFNewsModel *model = [YFNewsModel mj_objectWithKeyValues:dict];
             [self.bannerArray addObject:model];
+            
+            // 存入数据库
+            [[SQLiteManager shareIntance] insertNewsListWithCatId:self.catId model:model];
         }
         
     }

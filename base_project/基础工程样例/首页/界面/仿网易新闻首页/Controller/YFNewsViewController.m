@@ -16,10 +16,6 @@
     //储存catName的数组
     NSMutableArray *_infoTypeTextArray;
     
-    //储存数据列表的数组
-    NSMutableArray *_infoBannerDataList;
-    NSMutableArray *_infoDataList;
-    
     //储存catId的数组
     NSMutableArray *_infoCatIdArray;//咨询catIdArray
     
@@ -61,9 +57,34 @@
     
     [self initArray];
     
-    // 请求健康质询type数据
-    [self requestInfoTypeTitleData];
+    // 创建数据库表
+    [[SQLiteManager shareIntance] createTable:newsTypeTable];
     
+    // 监听网络状态
+    [self networkingStatus];
+}
+
+- (void)networkingStatus
+{
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        if (status == AFNetworkReachabilityStatusNotReachable) {
+           
+           NSMutableArray *array = [[SQLiteManager shareIntance] quertyNewsTypeSQL:@"SELECT catId, catName FROM 't_newsType'"];
+            _infoCatIdArray = array[0];
+            _infoTypeTextArray = array[1];
+            
+            [self setupHaveData];
+        }else
+        {
+            // 请求健康质询type数据
+            [self requestInfoTypeTitleData];
+        }
+    }];
+    
+    [manager startMonitoring];
 }
 
 #pragma mark - 初始化上面滑动文字
@@ -88,10 +109,6 @@
     //储存catName的数组
     _infoTypeTextArray = [[NSMutableArray alloc]init];
     
-    //储存数据列表的数组
-    _infoBannerDataList = [[NSMutableArray alloc]init];
-    _infoDataList = [[NSMutableArray alloc]init];
-    
     //储存catId的数组
     _infoCatIdArray = [[NSMutableArray alloc]init];
     
@@ -101,6 +118,7 @@
 #pragma mark  请求健康质询type数据
 - (void)requestInfoTypeTitleData
 {
+    DefWeakSelf(wself);
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -108,7 +126,7 @@
     
     [dict setObject:@"1" forKey:@"parentId"];
     
-    DefWeakSelf(wself);
+    
     [YFNetworking postWithUrl:nil refreshCache:YES params:dict success:^(id response) {
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -126,23 +144,17 @@
                 [_infoCatIdArray addObject:[dict objectForKey:@"catId"]];
             }
             
+            // 先清除数据库
+            [[SQLiteManager shareIntance] eraseTable:newsTypeTable];
+            
             for (int i = 0; i < _infoCatIdArray.count; i++) {
                 
-                NSMutableArray *array = [NSMutableArray array];
-                NSMutableArray *bannerArray = [[NSMutableArray alloc]init];
-                
-                [_infoDataList addObject:array];
-                [_infoBannerDataList addObject:bannerArray];
+                [[SQLiteManager shareIntance] insertSQL:[NSString stringWithFormat:@"INSERT INTO 't_newsType' (catId, catName) VALUES ('%@', '%@');", _infoCatIdArray[i], _infoTypeTextArray[i]]];
             }
             
-            wself.titleSlideScrollView.titleArray = _infoTypeTextArray;
+            // 有数据后进行的设置
+            [wself setupHaveData];
             
-            wself.contentScrollView.contentSize = CGSizeMake(UISCREENWIDTH*_infoCatIdArray.count, UISCREENHEIGHT-200);
-            
-            
-            [wself initAddController];
-            
-            self.needScrollToTopPage = self.childViewControllers[0];
         }
         
     } fail:^(NSError *error) {
@@ -150,6 +162,20 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
+
+// 有数据后进行的设置
+- (void)setupHaveData
+{
+    DefWeakSelf(wself);
+    wself.titleSlideScrollView.titleArray = _infoTypeTextArray;
+    
+    wself.contentScrollView.contentSize = CGSizeMake(UISCREENWIDTH*_infoCatIdArray.count, UISCREENHEIGHT-200);
+    
+    [wself initAddController];
+    
+    self.needScrollToTopPage = self.childViewControllers[0];
+}
+
 
 // 初始化子控制器
 - (void)initAddController

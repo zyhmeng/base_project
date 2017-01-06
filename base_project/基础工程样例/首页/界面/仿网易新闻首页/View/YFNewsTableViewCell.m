@@ -35,7 +35,10 @@
 {
     _newsModel = newsModel;
     
-    [self.imgView sd_setImageWithURL:[NSURL URLWithString:[CommonImageUrl stringByAppendingString:newsModel.imgUrl]] placeholderImage:[UIImage imageNamed:@"list_image_bg.png"]];
+    if (newsModel.imgUrl) {
+        
+        [self.imgView sd_setImageWithURL:[NSURL URLWithString:[CommonImageUrl stringByAppendingString:newsModel.imgUrl]] placeholderImage:[UIImage imageNamed:@"list_image_bg.png"]];
+    }
     
     self.imgView.layer.cornerRadius = 5.0;
     self.imgView.layer.masksToBounds = YES;
