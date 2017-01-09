@@ -55,7 +55,14 @@
 		<key>desc</key>
 		<string>数据</string>
 		<key>list</key>
-		<array/>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>2_1</string>
+				<key>name</key>
+				<string>数据库存储</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>desc</key>

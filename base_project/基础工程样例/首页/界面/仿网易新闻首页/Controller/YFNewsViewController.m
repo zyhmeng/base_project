@@ -126,7 +126,6 @@
     
     [dict setObject:@"1" forKey:@"parentId"];
     
-    
     [YFNetworking postWithUrl:nil refreshCache:YES params:dict success:^(id response) {
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -154,7 +153,6 @@
             
             // 有数据后进行的设置
             [wself setupHaveData];
-            
         }
         
     } fail:^(NSError *error) {
@@ -175,7 +173,6 @@
     
     self.needScrollToTopPage = self.childViewControllers[0];
 }
-
 
 // 初始化子控制器
 - (void)initAddController

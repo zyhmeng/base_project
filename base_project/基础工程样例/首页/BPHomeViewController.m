@@ -151,14 +151,17 @@
         YFUIKitViewController *uikitVC = [[YFUIKitViewController alloc] init];
         
         [self.navigationController pushViewController:uikitVC animated:YES];
-    }else if (indexPath.section == 2 && indexPath.row == 0)
+    }else if (indexPath.section == 1 && indexPath.row == 0)
+    {
+        SHOW_ALERT_VIEW(@"仿网易新闻首页的离线存储", nil);
+    }
+    else if (indexPath.section == 2 && indexPath.row == 0)
     {
         YFUIKitAnimationViewController *uikitAnimationVC = [[YFUIKitAnimationViewController alloc] init];
         
         [self.navigationController pushViewController:uikitAnimationVC animated:YES];
     }
 }
-
 
 
 @end

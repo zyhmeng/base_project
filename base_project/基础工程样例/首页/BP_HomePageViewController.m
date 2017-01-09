@@ -49,7 +49,7 @@
     
  
     CLLocation *location = [[CLLocation alloc] initWithLatitude:34.052337 longitude:-118.243680];
-       /*
+    /*
     ARGeoCoordinate *la = [ARGeoCoordinate coordinateWithLocation:location];
     la.dataObject = @"Los Angeles";
     */
@@ -59,6 +59,7 @@
     ARGeoCoordinate *ny = [ARGeoCoordinate coordinateWithLocation:location];
     ny.dataObject = @"New York";
     */
+    
     location = [[CLLocation alloc] initWithLatitude:51.500622 longitude:-0.126662];
     ARGeoCoordinate *london = [ARGeoCoordinate coordinateWithLocation:location];
     london.dataObject = @"伦敦";
