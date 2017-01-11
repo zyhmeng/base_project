@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+//用来封装 上传文件 的数据模型
+@interface FormData : NSObject
+@property(nonatomic,strong)NSData * fileData;//文件数据
+@property(nonatomic,copy)NSString * fileName;//文件名.jpg
+@property(nonatomic,copy)NSString * name;//参数名
+@property(nonatomic,copy)NSString * fileType;//文件类型
+@end
+
 
 #pragma mark--网络请求打印日志
 // 只在开发阶段会打印输出日志
@@ -327,4 +335,6 @@ typedef void(^YFResponseFail)(NSError *error);
                                success:(YFResponseSuccess)success
                                failure:(YFResponseFail)failure;
 
+
++ (void)uploadWithImage:(UIImage *)image url:(NSString *)url parameters:(NSDictionary *)parameters Success:(void (^)(id responseObject))success Failure:(void (^)(NSError * error))failure Progress:(void(^)(float percent))percent;
 @end

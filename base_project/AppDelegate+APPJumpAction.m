@@ -24,7 +24,6 @@
     //微信回调
     [WXApi handleOpenURL:url delegate:self];
     
-    
     return YES;
 }
 

@@ -22,6 +22,7 @@
     
     [self.navigationItem setTitle:@"UIKit动效"];
     
+    // 设置登录按钮
     [self setupLoginBtn];
 }
 

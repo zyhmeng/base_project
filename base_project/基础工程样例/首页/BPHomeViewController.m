@@ -17,6 +17,7 @@
 #import "YFRichTextViewController.h"
 #import "YFUIKitViewController.h"
 #import "YFUIKitAnimationViewController.h"
+#import "YFMomentsTableViewController.h"
 
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
@@ -148,9 +149,17 @@
         
     }else if (indexPath.section == 0 && indexPath.row == 6)
     {
+        YFMomentsTableViewController *momentsVC = [[YFMomentsTableViewController alloc] init];
+        
+        [self.navigationController pushViewController:momentsVC animated:YES];
+        
+    }
+    else if (indexPath.section == 0 && indexPath.row == 7)
+    {
         YFUIKitViewController *uikitVC = [[YFUIKitViewController alloc] init];
         
         [self.navigationController pushViewController:uikitVC animated:YES];
+        
     }else if (indexPath.section == 1 && indexPath.row == 0)
     {
         SHOW_ALERT_VIEW(@"仿网易新闻首页的离线存储", nil);

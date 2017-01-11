@@ -79,6 +79,7 @@
             [self setupHaveData];
         }else
         {
+            [[SQLiteManager shareIntance] dropNewsListTable];
             // 请求健康质询type数据
             [self requestInfoTypeTitleData];
         }

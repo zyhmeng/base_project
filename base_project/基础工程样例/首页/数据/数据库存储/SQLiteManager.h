@@ -22,6 +22,8 @@ typedef enum : NSUInteger {
 
 - (void)eraseTable:(tableType)tableType;
 
+- (void)dropNewsListTable;
+
 - (void)eraseNewsTableWithCatId:(NSString *)catId;
 
 - (void)insertSQL:(NSString *)sql;

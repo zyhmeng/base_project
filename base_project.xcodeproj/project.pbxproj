@@ -13,11 +13,13 @@
 		061305FE1E14FEF700625CB2 /* YFNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 061305F71E14FEF700625CB2 /* YFNewsTableViewCell.m */; };
 		061305FF1E14FEF700625CB2 /* YFNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061305F81E14FEF700625CB2 /* YFNewsTableViewCell.xib */; };
 		061306001E14FEF700625CB2 /* YHTitleSlideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061305FA1E14FEF700625CB2 /* YHTitleSlideScrollView.m */; };
+		062172DA1E24C4BD00131B7C /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 062172D91E24C4BD00131B7C /* NSString+Extension.m */; };
 		064753511E0CBF500023156B /* YFHotSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064753501E0CBF500023156B /* YFHotSearchViewController.m */; };
 		064753571E0CBFAA0023156B /* HistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 064753541E0CBFAA0023156B /* HistoryItem.m */; };
 		064753581E0CBFAA0023156B /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 064753561E0CBFAA0023156B /* HistoryView.m */; };
 		0647535B1E0D077D0023156B /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647535A1E0D077D0023156B /* PCPieChart.m */; };
 		0647535F1E0D07FA0023156B /* YFPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647535E1E0D07FA0023156B /* YFPieChartViewController.m */; };
+		065E14631E25BF8C00D10E05 /* YLImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 065E14621E25BF8C00D10E05 /* YLImageBrowser.m */; };
 		06714E9F1E0B6DDA00C174D5 /* ImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */; };
 		06714EA21E0B6E9F00C174D5 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EA11E0B6E9F00C174D5 /* PhotoView.m */; };
 		06714EB11E0B86A800C174D5 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EAC1E0B86A800C174D5 /* RIButtonItem.m */; };
@@ -42,6 +44,11 @@
 		06CAE6D51E1CF97400F6B318 /* YFUIKitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CAE6D31E1CF97400F6B318 /* YFUIKitAnimationViewController.m */; };
 		06CAE6D61E1CF97400F6B318 /* YFUIKitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CAE6D41E1CF97400F6B318 /* YFUIKitAnimationViewController.xib */; };
 		06CAE6D91E1CF9B200F6B318 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CAE6D81E1CF9B200F6B318 /* UIColor+CustomColors.m */; };
+		06F4F0231E262BE200EAE6A6 /* YFMomentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4F0191E262BE200EAE6A6 /* YFMomentsTableViewController.m */; };
+		06F4F0241E262BE200EAE6A6 /* YFMomentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4F01C1E262BE200EAE6A6 /* YFMomentsModel.m */; };
+		06F4F0251E262BE200EAE6A6 /* YFMomentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4F01F1E262BE200EAE6A6 /* YFMomentsCell.m */; };
+		06F4F0261E262BE200EAE6A6 /* YFMomentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F4F0201E262BE200EAE6A6 /* YFMomentsCell.xib */; };
+		06F4F0271E262BE200EAE6A6 /* YFMomentsPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4F0221E262BE200EAE6A6 /* YFMomentsPictureView.m */; };
 		06FF81F81E0A1374001FA713 /* YFPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF81F71E0A1374001FA713 /* YFPhotoModel.m */; };
 		840A03CF1D92732A00BBDA8A /* UINavigationController+PUSH.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A03CE1D92732A00BBDA8A /* UINavigationController+PUSH.m */; };
 		8410A11C1C101F8C004A0425 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8410A0B81C101F8C004A0425 /* AlipaySDK.bundle */; };
@@ -291,6 +298,8 @@
 		061305F81E14FEF700625CB2 /* YFNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFNewsTableViewCell.xib; sourceTree = "<group>"; };
 		061305F91E14FEF700625CB2 /* YHTitleSlideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTitleSlideScrollView.h; sourceTree = "<group>"; };
 		061305FA1E14FEF700625CB2 /* YHTitleSlideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTitleSlideScrollView.m; sourceTree = "<group>"; };
+		062172D81E24C4BD00131B7C /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		062172D91E24C4BD00131B7C /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		0647534F1E0CBF500023156B /* YFHotSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFHotSearchViewController.h; sourceTree = "<group>"; };
 		064753501E0CBF500023156B /* YFHotSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFHotSearchViewController.m; sourceTree = "<group>"; };
 		064753531E0CBFAA0023156B /* HistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryItem.h; sourceTree = "<group>"; };
@@ -301,6 +310,8 @@
 		0647535A1E0D077D0023156B /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
 		0647535D1E0D07FA0023156B /* YFPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPieChartViewController.h; sourceTree = "<group>"; };
 		0647535E1E0D07FA0023156B /* YFPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPieChartViewController.m; sourceTree = "<group>"; };
+		065E14611E25BF8C00D10E05 /* YLImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageBrowser.h; sourceTree = "<group>"; };
+		065E14621E25BF8C00D10E05 /* YLImageBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImageBrowser.m; sourceTree = "<group>"; };
 		06714E9D1E0B6DDA00C174D5 /* ImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserViewController.h; sourceTree = "<group>"; };
 		06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserViewController.m; sourceTree = "<group>"; };
 		06714EA01E0B6E9F00C174D5 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
@@ -345,6 +356,15 @@
 		06CAE6D41E1CF97400F6B318 /* YFUIKitAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFUIKitAnimationViewController.xib; sourceTree = "<group>"; };
 		06CAE6D71E1CF9B200F6B318 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		06CAE6D81E1CF9B200F6B318 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		06F4F0181E262BE200EAE6A6 /* YFMomentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMomentsTableViewController.h; sourceTree = "<group>"; };
+		06F4F0191E262BE200EAE6A6 /* YFMomentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMomentsTableViewController.m; sourceTree = "<group>"; };
+		06F4F01B1E262BE200EAE6A6 /* YFMomentsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMomentsModel.h; sourceTree = "<group>"; };
+		06F4F01C1E262BE200EAE6A6 /* YFMomentsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMomentsModel.m; sourceTree = "<group>"; };
+		06F4F01E1E262BE200EAE6A6 /* YFMomentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMomentsCell.h; sourceTree = "<group>"; };
+		06F4F01F1E262BE200EAE6A6 /* YFMomentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMomentsCell.m; sourceTree = "<group>"; };
+		06F4F0201E262BE200EAE6A6 /* YFMomentsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFMomentsCell.xib; sourceTree = "<group>"; };
+		06F4F0211E262BE200EAE6A6 /* YFMomentsPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMomentsPictureView.h; sourceTree = "<group>"; };
+		06F4F0221E262BE200EAE6A6 /* YFMomentsPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMomentsPictureView.m; sourceTree = "<group>"; };
 		06FF81F61E0A1374001FA713 /* YFPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPhotoModel.h; sourceTree = "<group>"; };
 		06FF81F71E0A1374001FA713 /* YFPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPhotoModel.m; sourceTree = "<group>"; };
 		840A03CD1D92732A00BBDA8A /* UINavigationController+PUSH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PUSH.h"; sourceTree = "<group>"; };
@@ -1054,6 +1074,7 @@
 				0647535C1E0D07D60023156B /* 饼状图 */,
 				061305DB1E149C2200625CB2 /* 仿网易新闻首页 */,
 				068863D41E1B90C4001B9904 /* Html富文本处理 */,
+				06F4F0161E262BE200EAE6A6 /* 仿朋友圈(图文列表) */,
 				06727C4D1E1CC5F9007F1248 /* UIKit */,
 			);
 			path = "界面";
@@ -1095,6 +1116,46 @@
 				06CAE6D41E1CF97400F6B318 /* YFUIKitAnimationViewController.xib */,
 			);
 			path = "UIKit动效";
+			sourceTree = "<group>";
+		};
+		06F4F0161E262BE200EAE6A6 /* 仿朋友圈(图文列表) */ = {
+			isa = PBXGroup;
+			children = (
+				06F4F0171E262BE200EAE6A6 /* Controller */,
+				06F4F01A1E262BE200EAE6A6 /* Model */,
+				06F4F01D1E262BE200EAE6A6 /* View */,
+			);
+			path = "仿朋友圈(图文列表)";
+			sourceTree = "<group>";
+		};
+		06F4F0171E262BE200EAE6A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06F4F0181E262BE200EAE6A6 /* YFMomentsTableViewController.h */,
+				06F4F0191E262BE200EAE6A6 /* YFMomentsTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		06F4F01A1E262BE200EAE6A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06F4F01B1E262BE200EAE6A6 /* YFMomentsModel.h */,
+				06F4F01C1E262BE200EAE6A6 /* YFMomentsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06F4F01D1E262BE200EAE6A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06F4F01E1E262BE200EAE6A6 /* YFMomentsCell.h */,
+				06F4F01F1E262BE200EAE6A6 /* YFMomentsCell.m */,
+				06F4F0201E262BE200EAE6A6 /* YFMomentsCell.xib */,
+				06F4F0211E262BE200EAE6A6 /* YFMomentsPictureView.h */,
+				06F4F0221E262BE200EAE6A6 /* YFMomentsPictureView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		84109FD11C101588004A0425 /* Pay */ = {
@@ -1912,6 +1973,8 @@
 		84BD2DA71BE349C2006E93A1 /* 工具库 */ = {
 			isa = PBXGroup;
 			children = (
+				065E14611E25BF8C00D10E05 /* YLImageBrowser.h */,
+				065E14621E25BF8C00D10E05 /* YLImageBrowser.m */,
 				064753591E0D077D0023156B /* PCPieChart.h */,
 				0647535A1E0D077D0023156B /* PCPieChart.m */,
 				84F7B96B1CBE22C8008381FE /* YFNetworking.h */,
@@ -2078,6 +2141,8 @@
 				068863DE1E1B945E001B9904 /* UIView+Extension.m */,
 				06CAE6D71E1CF9B200F6B318 /* UIColor+CustomColors.h */,
 				06CAE6D81E1CF9B200F6B318 /* UIColor+CustomColors.m */,
+				062172D81E24C4BD00131B7C /* NSString+Extension.h */,
+				062172D91E24C4BD00131B7C /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2274,6 +2339,7 @@
 				8425E1B41BFED0A20094DF28 /* radar.png in Resources */,
 				8438DAE01C0EC1EA00E1533C /* AMap.bundle in Resources */,
 				84E394BF1DA8CED800F520C1 /* UMSocialShareSelectionViewCell.xib in Resources */,
+				06F4F0261E262BE200EAE6A6 /* YFMomentsCell.xib in Resources */,
 				84E394BA1DA8CED800F520C1 /* UMSocialSDKResources.bundle in Resources */,
 				84E394C61DA8DBE700F520C1 /* FuncList.plist in Resources */,
 				8425E1B11BFED0A20094DF28 /* Default-568h@2x.png in Resources */,
@@ -2320,6 +2386,7 @@
 				84BD2D361BE32131006E93A1 /* UIView+SDExtension.m in Sources */,
 				84BD2D341BE32131006E93A1 /* SDCollectionViewCell.m in Sources */,
 				06B357581E163C470053B55C /* YHRefreshBackNormalFooter.m in Sources */,
+				06F4F0241E262BE200EAE6A6 /* YFMomentsModel.m in Sources */,
 				061305FD1E14FEF700625CB2 /* YFNewsModel.m in Sources */,
 				84BD2CF61BE32131006E93A1 /* FMDatabase.m in Sources */,
 				84F7B9681CBE206E008381FE /* UIProgressView+AFNetworking.m in Sources */,
@@ -2343,6 +2410,7 @@
 				84F7B95F1CBE206E008381FE /* AFURLRequestSerialization.m in Sources */,
 				84BD2D371BE32131006E93A1 /* MKAnnotationView+WebCache.m in Sources */,
 				06945DEB1E01247000DA82D9 /* YFPhotoShowViewController.m in Sources */,
+				06F4F0231E262BE200EAE6A6 /* YFMomentsTableViewController.m in Sources */,
 				84BD2CFA1BE32131006E93A1 /* FMResultSet.m in Sources */,
 				84E394C01DA8CED800F520C1 /* UMSocialUIManager.m in Sources */,
 				8431EE551C2546D600B8F7AB /* MJPropertyKey.m in Sources */,
@@ -2395,6 +2463,7 @@
 				8425E1A41BFECCE00094DF28 /* RadarView.m in Sources */,
 				8431EE5A1C2546D600B8F7AB /* NSObject+MJProperty.m in Sources */,
 				84BD2D2E1BE32131006E93A1 /* TransformationMatrix.mm in Sources */,
+				06F4F0251E262BE200EAE6A6 /* YFMomentsCell.m in Sources */,
 				06727C551E1CC6CC007F1248 /* YFUIButton.m in Sources */,
 				84A064B61C168D5B005132AB /* WXUtil.mm in Sources */,
 				84BD2D1B1BE32131006E93A1 /* UIView+MJExtension.m in Sources */,
@@ -2424,6 +2493,7 @@
 				84F7B9661CBE206E008381FE /* UIButton+AFNetworking.m in Sources */,
 				84BD2D271BE32131006E93A1 /* POPDecayAnimation.mm in Sources */,
 				8410E58B1CC9CF1A00663E50 /* BP_HomePageViewController.m in Sources */,
+				062172DA1E24C4BD00131B7C /* NSString+Extension.m in Sources */,
 				8431EE5B1C2546D600B8F7AB /* NSString+MJExtension.m in Sources */,
 				84BD2CF31BE32131006E93A1 /* FMDatabase+FTS3.m in Sources */,
 				84BD2D3A1BE32131006E93A1 /* SDWebImageCompat.m in Sources */,
@@ -2444,6 +2514,7 @@
 				8431EE541C2546D600B8F7AB /* MJProperty.m in Sources */,
 				84F7B9601CBE206E008381FE /* AFURLResponseSerialization.m in Sources */,
 				8410A12B1C101FB3004A0425 /* AliOrder.m in Sources */,
+				065E14631E25BF8C00D10E05 /* YLImageBrowser.m in Sources */,
 				84BD2D211BE32131006E93A1 /* POPAnimationRuntime.mm in Sources */,
 				068863DC1E1B90C4001B9904 /* YFRichTextViewController.m in Sources */,
 				067E45CC1E1E2C81005C0591 /* SQLiteManager.m in Sources */,
@@ -2452,6 +2523,7 @@
 				84BD2D2B1BE32131006E93A1 /* POPPropertyAnimation.mm in Sources */,
 				8431EE581C2546D600B8F7AB /* NSObject+MJCoding.m in Sources */,
 				84BD2D411BE32131006E93A1 /* UIImage+GIF.m in Sources */,
+				06F4F0271E262BE200EAE6A6 /* YFMomentsPictureView.m in Sources */,
 				84BD2D2F1BE32131006E93A1 /* NSData+SDDataCache.m in Sources */,
 				84E394BB1DA8CED800F520C1 /* UMSocialCollectionCell.m in Sources */,
 				06945DE81E01244400DA82D9 /* YFPhotoShowView.m in Sources */,

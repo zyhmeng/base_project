@@ -97,7 +97,7 @@ static SQLiteManager *manager = nil;
 
 - (void)eraseNewsTableWithCatId:(NSString *)catId
 {
-    [db executeUpdate:@"DELETE * FROM t_newsList WHERE catId = '%@';",catId];
+    [db executeUpdate:[NSString stringWithFormat:@"DELETE  FROM t_newsList WHERE catId = %@;",catId]];
 }
 
 - (void)insertSQL:(NSString *)sql
@@ -111,6 +111,10 @@ static SQLiteManager *manager = nil;
     }
 }
 
+- (void)dropNewsListTable
+{
+    [db executeUpdate:@"DROP TABLE IF EXISTS 't_newsList'"];
+}
 
 - (void)insertNewsListWithCatId:(NSString *)catId model:(YFNewsModel *)model
 {
