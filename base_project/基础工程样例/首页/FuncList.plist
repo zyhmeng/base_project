@@ -102,5 +102,18 @@
 		<key>list</key>
 		<array/>
 	</dict>
+	<dict>
+		<key>desc</key>
+		<string>Objc调用Swift样例</string>
+		<key>list</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<string>5_1</string>
+				<key>name</key>
+				<string>调用实例</string>
+			</dict>
+		</array>
+	</dict>
 </array>
 </plist>

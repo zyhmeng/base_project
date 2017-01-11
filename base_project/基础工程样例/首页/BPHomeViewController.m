@@ -17,7 +17,7 @@
 #import "YFRichTextViewController.h"
 #import "YFUIKitViewController.h"
 #import "YFUIKitAnimationViewController.h"
-
+#import "UseSwiftViewController.h"
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *MainFuncTableView;
@@ -160,6 +160,12 @@
         YFUIKitAnimationViewController *uikitAnimationVC = [[YFUIKitAnimationViewController alloc] init];
         
         [self.navigationController pushViewController:uikitAnimationVC animated:YES];
+    }
+    else if (indexPath.section == 5 && indexPath.row == 0)
+    {
+        UseSwiftViewController *useSwiftVC = [[UseSwiftViewController alloc] init];
+        
+        [self.navigationController pushViewController:useSwiftVC animated:YES];
     }
 }
 
