@@ -267,6 +267,8 @@
 		84F7B96A1CBE206E008381FE /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7B95B1CBE206E008381FE /* UIWebView+AFNetworking.m */; };
 		84F7B96D1CBE22C8008381FE /* YFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7B96C1CBE22C8008381FE /* YFNetworking.m */; };
 		84F8310C1BE71444002F36C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F8310B1BE71444002F36C5 /* Default-568h@2x.png */; };
+		C96606821E2610E100F72904 /* SwiftFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96606811E2610E100F72904 /* SwiftFile.swift */; };
+		C96606851E26114100F72904 /* UseSwiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96606841E26114100F72904 /* UseSwiftViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -858,6 +860,10 @@
 		84F7B96B1CBE22C8008381FE /* YFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFNetworking.h; sourceTree = "<group>"; };
 		84F7B96C1CBE22C8008381FE /* YFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFNetworking.m; sourceTree = "<group>"; };
 		84F8310B1BE71444002F36C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C96606801E2610E100F72904 /* base_project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "base_project-Bridging-Header.h"; sourceTree = "<group>"; };
+		C96606811E2610E100F72904 /* SwiftFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFile.swift; sourceTree = "<group>"; };
+		C96606831E26114100F72904 /* UseSwiftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseSwiftViewController.h; sourceTree = "<group>"; };
+		C96606841E26114100F72904 /* UseSwiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseSwiftViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1580,6 +1586,7 @@
 				84E394C51DA8DBE700F520C1 /* FuncList.plist */,
 				06945DE41E01226B00DA82D9 /* 界面 */,
 				067E45C81E1E2C2A005C0591 /* 数据 */,
+				C966067F1E2610B800F72904 /* Objc调用Swift实例 */,
 				06CAE6D01E1CF90900F6B318 /* 动效 */,
 			);
 			path = "首页";
@@ -2212,6 +2219,17 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		C966067F1E2610B800F72904 /* Objc调用Swift实例 */ = {
+			isa = PBXGroup;
+			children = (
+				C96606831E26114100F72904 /* UseSwiftViewController.h */,
+				C96606841E26114100F72904 /* UseSwiftViewController.m */,
+				C96606811E2610E100F72904 /* SwiftFile.swift */,
+				C96606801E2610E100F72904 /* base_project-Bridging-Header.h */,
+			);
+			path = "Objc调用Swift实例";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2279,6 +2297,7 @@
 				TargetAttributes = {
 					84BD2B9B1BE30B5D006E93A1 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 					};
 					84BD2BB71BE30B5D006E93A1 = {
 						CreatedOnToolsVersion = 7.0;
@@ -2415,6 +2434,7 @@
 				84E394C01DA8CED800F520C1 /* UMSocialUIManager.m in Sources */,
 				8431EE551C2546D600B8F7AB /* MJPropertyKey.m in Sources */,
 				84BD2CF51BE32131006E93A1 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+				C96606851E26114100F72904 /* UseSwiftViewController.m in Sources */,
 				84BD2CF81BE32131006E93A1 /* FMDatabasePool.m in Sources */,
 				8410A1231C101F8C004A0425 /* DataVerifier.m in Sources */,
 				84F7B9611CBE206E008381FE /* AFURLSessionManager.m in Sources */,
@@ -2423,6 +2443,7 @@
 				8425E1A21BFECCE00094DF28 /* ARGeoCoordinate.m in Sources */,
 				84F7B9651CBE206E008381FE /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				84BD2D1C1BE32131006E93A1 /* MZTimerLabel.m in Sources */,
+				C96606821E2610E100F72904 /* SwiftFile.swift in Sources */,
 				84BD2D431BE32131006E93A1 /* UIImage+WebP.m in Sources */,
 				064753571E0CBFAA0023156B /* HistoryItem.m in Sources */,
 				84F7B95E1CBE206E008381FE /* AFSecurityPolicy.m in Sources */,
@@ -2703,6 +2724,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -2741,6 +2763,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunfengapp.baseproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "base_project/基础工程样例/首页/Objc调用Swift实例/base_project-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -2748,6 +2773,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -2786,12 +2812,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunfengapp.baseproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "base_project/基础工程样例/首页/Objc调用Swift实例/base_project-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		84BD2BD01BE30B5D006E93A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = base_projectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2804,6 +2833,7 @@
 		84BD2BD11BE30B5D006E93A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = base_projectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2816,6 +2846,7 @@
 		84BD2BD31BE30B5D006E93A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = base_projectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yunfengapp.base-projectUITests";
@@ -2828,6 +2859,7 @@
 		84BD2BD41BE30B5D006E93A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = base_projectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yunfengapp.base-projectUITests";

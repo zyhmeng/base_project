@@ -170,6 +170,12 @@
         
         [self.navigationController pushViewController:uikitAnimationVC animated:YES];
     }
+    else if (indexPath.section == 5 && indexPath.row == 0)
+    {
+        UseSwiftViewController *useSwiftVC = [[UseSwiftViewController alloc] init];
+        
+        [self.navigationController pushViewController:useSwiftVC animated:YES];
+    }
 }
 
 
