@@ -54,7 +54,6 @@
 //弹出提醒窗
 #define SHOW_ALERT_VIEW(TITLE, MSG) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TITLE message:MSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
 
-
 //HTTP请求头验证
 #define HttpHeaderFieldName @""
 
