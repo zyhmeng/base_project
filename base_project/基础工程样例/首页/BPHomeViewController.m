@@ -17,6 +17,7 @@
 #import "YFRichTextViewController.h"
 #import "YFUIKitViewController.h"
 #import "YFUIKitAnimationViewController.h"
+#import "UseSwiftViewController.h"
 #import "YFMomentsTableViewController.h"
 
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
