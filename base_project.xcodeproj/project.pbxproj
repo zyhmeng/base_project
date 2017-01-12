@@ -20,6 +20,10 @@
 		0647535B1E0D077D0023156B /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647535A1E0D077D0023156B /* PCPieChart.m */; };
 		0647535F1E0D07FA0023156B /* YFPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647535E1E0D07FA0023156B /* YFPieChartViewController.m */; };
 		065E14631E25BF8C00D10E05 /* YLImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 065E14621E25BF8C00D10E05 /* YLImageBrowser.m */; };
+		06696A051E271BF800AF638C /* YFTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06696A041E271BF800AF638C /* YFTransitionViewController.m */; };
+		06696A081E271C1700AF638C /* YFModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06696A071E271C1700AF638C /* YFModalViewController.m */; };
+		06696A0B1E271EFA00AF638C /* YFPresentingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06696A0A1E271EFA00AF638C /* YFPresentingAnimation.m */; };
+		06696A0E1E2722A800AF638C /* YFDismissingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06696A0D1E2722A800AF638C /* YFDismissingAnimation.m */; };
 		06714E9F1E0B6DDA00C174D5 /* ImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */; };
 		06714EA21E0B6E9F00C174D5 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EA11E0B6E9F00C174D5 /* PhotoView.m */; };
 		06714EB11E0B86A800C174D5 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06714EAC1E0B86A800C174D5 /* RIButtonItem.m */; };
@@ -314,6 +318,14 @@
 		0647535E1E0D07FA0023156B /* YFPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPieChartViewController.m; sourceTree = "<group>"; };
 		065E14611E25BF8C00D10E05 /* YLImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageBrowser.h; sourceTree = "<group>"; };
 		065E14621E25BF8C00D10E05 /* YLImageBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLImageBrowser.m; sourceTree = "<group>"; };
+		06696A031E271BF800AF638C /* YFTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTransitionViewController.h; sourceTree = "<group>"; };
+		06696A041E271BF800AF638C /* YFTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTransitionViewController.m; sourceTree = "<group>"; };
+		06696A061E271C1700AF638C /* YFModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFModalViewController.h; sourceTree = "<group>"; };
+		06696A071E271C1700AF638C /* YFModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFModalViewController.m; sourceTree = "<group>"; };
+		06696A091E271EFA00AF638C /* YFPresentingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPresentingAnimation.h; sourceTree = "<group>"; };
+		06696A0A1E271EFA00AF638C /* YFPresentingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPresentingAnimation.m; sourceTree = "<group>"; };
+		06696A0C1E2722A800AF638C /* YFDismissingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFDismissingAnimation.h; sourceTree = "<group>"; };
+		06696A0D1E2722A800AF638C /* YFDismissingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFDismissingAnimation.m; sourceTree = "<group>"; };
 		06714E9D1E0B6DDA00C174D5 /* ImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserViewController.h; sourceTree = "<group>"; };
 		06714E9E1E0B6DDA00C174D5 /* ImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserViewController.m; sourceTree = "<group>"; };
 		06714EA01E0B6E9F00C174D5 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
@@ -1000,6 +1012,21 @@
 			path = "饼状图";
 			sourceTree = "<group>";
 		};
+		06696A021E271BAD00AF638C /* 转场动画 */ = {
+			isa = PBXGroup;
+			children = (
+				06696A031E271BF800AF638C /* YFTransitionViewController.h */,
+				06696A041E271BF800AF638C /* YFTransitionViewController.m */,
+				06696A061E271C1700AF638C /* YFModalViewController.h */,
+				06696A071E271C1700AF638C /* YFModalViewController.m */,
+				06696A091E271EFA00AF638C /* YFPresentingAnimation.h */,
+				06696A0A1E271EFA00AF638C /* YFPresentingAnimation.m */,
+				06696A0C1E2722A800AF638C /* YFDismissingAnimation.h */,
+				06696A0D1E2722A800AF638C /* YFDismissingAnimation.m */,
+			);
+			path = "转场动画";
+			sourceTree = "<group>";
+		};
 		06714EAA1E0B86A800C174D5 /* UIAlertView-Blocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1110,6 +1137,7 @@
 			isa = PBXGroup;
 			children = (
 				06CAE6D11E1CF94400F6B318 /* UIKit动效 */,
+				06696A021E271BAD00AF638C /* 转场动画 */,
 			);
 			path = "动效";
 			sourceTree = "<group>";
@@ -2407,6 +2435,7 @@
 				06B357581E163C470053B55C /* YHRefreshBackNormalFooter.m in Sources */,
 				06F4F0241E262BE200EAE6A6 /* YFMomentsModel.m in Sources */,
 				061305FD1E14FEF700625CB2 /* YFNewsModel.m in Sources */,
+				06696A0E1E2722A800AF638C /* YFDismissingAnimation.m in Sources */,
 				84BD2CF61BE32131006E93A1 /* FMDatabase.m in Sources */,
 				84F7B9681CBE206E008381FE /* UIProgressView+AFNetworking.m in Sources */,
 				8431EE511C2546D600B8F7AB /* MJDictionaryCache.m in Sources */,
@@ -2501,6 +2530,7 @@
 				068863E91E1B9D1D001B9904 /* YFAPhotoChoose.m in Sources */,
 				84BD2D291BE32131006E93A1 /* POPLayerExtras.mm in Sources */,
 				84F7B96D1CBE22C8008381FE /* YFNetworking.m in Sources */,
+				06696A081E271C1700AF638C /* YFModalViewController.m in Sources */,
 				84BD2D281BE32131006E93A1 /* POPGeometry.mm in Sources */,
 				84BD2DAD1BE360E5006E93A1 /* POPTool.m in Sources */,
 				061306001E14FEF700625CB2 /* YHTitleSlideScrollView.m in Sources */,
@@ -2553,6 +2583,7 @@
 				8425E1A31BFECCE00094DF28 /* ARObjectView.m in Sources */,
 				84BD2D091BE32131006E93A1 /* MJRefreshAutoFooter.m in Sources */,
 				84EEAED31BEC7F0A00577612 /* ALOCenteredButton.m in Sources */,
+				06696A0B1E271EFA00AF638C /* YFPresentingAnimation.m in Sources */,
 				84BD2D261BE32131006E93A1 /* POPCustomAnimation.mm in Sources */,
 				84BD2D0F1BE32131006E93A1 /* MJRefreshAutoNormalFooter.m in Sources */,
 				84BD2D0B1BE32131006E93A1 /* MJRefreshComponent.m in Sources */,
@@ -2563,6 +2594,7 @@
 				84BD2D3D1BE32131006E93A1 /* SDWebImageDownloaderOperation.m in Sources */,
 				06714EB21E0B86A800C174D5 /* UIActionSheet+Blocks.m in Sources */,
 				84BD2D451BE32131006E93A1 /* UIImageView+WebCache.m in Sources */,
+				06696A051E271BF800AF638C /* YFTransitionViewController.m in Sources */,
 				84BD2BA11BE30B5D006E93A1 /* main.m in Sources */,
 				84F7B9631CBE206E008381FE /* AFImageDownloader.m in Sources */,
 				84BD2D321BE32131006E93A1 /* TADotView.m in Sources */,

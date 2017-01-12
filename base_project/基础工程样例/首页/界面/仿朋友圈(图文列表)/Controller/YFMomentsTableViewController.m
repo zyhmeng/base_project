@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationItem setTitle:@"仿朋友圈"];
+    [self.navigationItem setTitle:@"仿朋友圈(图文列表)"];
 
     [self setupTableView];
     

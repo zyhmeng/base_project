@@ -47,7 +47,9 @@
 				<key>id</key>
 				<string>1_7</string>
 				<key>name</key>
-				<string>仿朋友圈</string>
+				<string>仿朋友圈(图文列表)</string>
+				<key>New item</key>
+				<string></string>
 			</dict>
 			<dict>
 				<key>id</key>
@@ -80,6 +82,12 @@
 				<string>3_1</string>
 				<key>name</key>
 				<string>UIKit动效</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<string>3_2</string>
+				<key>name</key>
+				<string>转场动画</string>
 			</dict>
 		</array>
 	</dict>

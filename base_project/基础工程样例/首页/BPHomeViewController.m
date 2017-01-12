@@ -19,6 +19,7 @@
 #import "YFUIKitAnimationViewController.h"
 #import "UseSwiftViewController.h"
 #import "YFMomentsTableViewController.h"
+#import "YFTransitionViewController.h"
 
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
@@ -170,6 +171,11 @@
         YFUIKitAnimationViewController *uikitAnimationVC = [[YFUIKitAnimationViewController alloc] init];
         
         [self.navigationController pushViewController:uikitAnimationVC animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row == 1)
+    {
+        YFTransitionViewController *transitionVC = [[YFTransitionViewController alloc] init];
+        
+        [self.navigationController pushViewController:transitionVC animated:YES];
     }
     else if (indexPath.section == 5 && indexPath.row == 0)
     {

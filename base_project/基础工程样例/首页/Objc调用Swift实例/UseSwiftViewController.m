@@ -8,6 +8,8 @@
 
 #import "UseSwiftViewController.h"
 #import "base_project-Swift.h" //该文件是系统自动帮你生成的文件,并且在项目中不可见的,使用时候直接import即可
+
+
 @interface UseSwiftViewController ()
 
 @end
@@ -38,6 +40,7 @@
     //此处cmd 点击 可以看到 系统自动生成的base_project-Swift.h文件,会把swift中的实例方法自动编译成objc语言,因此直接调用即可
     SwiftFile * file = [[SwiftFile alloc]init];
     [file useSwift];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
