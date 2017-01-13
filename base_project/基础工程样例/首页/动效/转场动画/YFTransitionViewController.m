@@ -28,8 +28,7 @@
 }
 
 - (void)addButton
-{//https://github.com/zyhmeng/base_project.git
-    //http://s3.xtox.net:4433/ios_base_project.git
+{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     
     button.yh_width = UISCREENWIDTH;
