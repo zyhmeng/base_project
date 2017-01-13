@@ -20,13 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.navigationItem setTitle:@"转场动画"];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self addButton];
 }
 
 - (void)addButton
-{
+{//https://github.com/zyhmeng/base_project.git
+    //http://s3.xtox.net:4433/ios_base_project.git
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     
     button.yh_width = UISCREENWIDTH;
@@ -46,8 +49,8 @@
 {
     YFModalViewController *modalVC = [[YFModalViewController alloc] init];
     
-//    modalVC.transitioningDelegate = self;
-//    modalVC.modalPresentationStyle = UIModalPresentationCustom;
+    modalVC.transitioningDelegate = self;
+    modalVC.modalPresentationStyle = UIModalPresentationCustom;
     
     [self presentViewController:modalVC animated:YES completion:nil];
 }

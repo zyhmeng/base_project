@@ -8,6 +8,7 @@
 
 #import "YFModalViewController.h"
 #import "UIColor+CustomColors.h"
+#import "Masonry.h"
 
 @interface YFModalViewController ()
 
@@ -20,10 +21,6 @@
     
     self.view.layer.cornerRadius = 8.0;
     self.view.backgroundColor = [UIColor customBlueColor];
-    
-    self.view.yh_width = 200;
-    self.view.yh_height = 200;
-    self.view.center = CGPointMake(UISCREENWIDTH/2, UISCREENHEIGHT/2);
     
     [self addDismissButton];
 }
@@ -39,6 +36,13 @@
     
     [self.view addSubview:dismissButton];
     
+    [dismissButton mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(0);
+        make.size.mas_equalTo(CGSizeMake(self.view.yh_width, 40));
+        make.centerX.equalTo(self.view);
+        
+    }];
     
 }
 
