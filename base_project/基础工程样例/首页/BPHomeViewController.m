@@ -20,6 +20,7 @@
 #import "UseSwiftViewController.h"
 #import "YFMomentsTableViewController.h"
 #import "YFTransitionViewController.h"
+#import "YFQQPlayMusicAnimationViewController.h"
 
 @interface BPHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate>
 
@@ -176,6 +177,12 @@
         YFTransitionViewController *transitionVC = [[YFTransitionViewController alloc] init];
         
         [self.navigationController pushViewController:transitionVC animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row == 2)
+    {
+        YFQQPlayMusicAnimationViewController *playMusicVC = [[YFQQPlayMusicAnimationViewController alloc] init];
+        
+        [self.navigationController pushViewController:playMusicVC animated:YES];
+        
     }
     else if (indexPath.section == 5 && indexPath.row == 0)
     {

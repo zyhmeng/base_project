@@ -87,7 +87,13 @@
 				<key>id</key>
 				<string>3_2</string>
 				<key>name</key>
-				<string>转场动画</string>
+				<string>弹出View动画</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<string>3_3</string>
+				<key>name</key>
+				<string>QQ播放音乐动画</string>
 			</dict>
 		</array>
 	</dict>
